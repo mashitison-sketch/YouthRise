@@ -1,0 +1,19 @@
+YouthRise Vision
+
+Mission:
+Help young people find opportunities.
+
+Core Features:
+- Jobs
+- Bursaries
+- Learnerships
+- Funding
+- CV Builder
+- Goal Tracking
+- Courses
+
+Target Users:
+Students
+Graduates
+Job Seekers
+Young Entrepreneurs
