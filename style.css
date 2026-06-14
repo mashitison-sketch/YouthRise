@@ -1,266 +1,189 @@
 body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background: #f5f5f5;
+font-family: Arial, sans-serif;
+margin:0;
+background:#f5f5f5;
 }
 
 header{
-    background:#0A2342;
-    color:white;
-    padding:20px 40px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+background:#0A2342;
+color:white;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
 }
 
-nav{
-    margin-top:10px;
-}
-
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    font-weight:bold;
-}
-
-.hero{
-    text-align:center;
-    padding:80px 20px;
-    background:white;
-}
-
-.hero h2{
-    font-size:48px;
-}
-
-.hero p{
-    font-size:18px;
-}
-
-button{
-    background:#D4AF37;
-    border:none;
-    padding:15px 25px;
-    margin:10px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.cards{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-    padding:40px;
-}
-
-.card{
-    background:white;
-    width:280px;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    text-align:center;
-    transition:0.3s;
-}
-
-footer{
-    background:#0A2342;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-
-input{
-    width:60%;
-    max-width:500px;
-    padding:15px;
-    margin:20px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    font-size:16px;
-}
-
-<div class="card">
-    <h3>📚 Free Courses</h3>
-    <p>Learn valuable skills online.</p>
-</div>
-
-<div class="card">
-    <h3>🎯 Goals</h3>
-    <p>Track your progress and ambitions.</p>
-</div>
-
-<div class="card">
-    <h3>💻 Remote Work</h3>
-    <p>Find online work opportunities.</p>
-</div>
-
-<div class="card">
-    <h3>🏆 Competitions</h3>
-    <p>Discover contests and challenges.</p>
-</div>
-
-.stats{
-    display:flex;
-    justify-content:center;
-    gap:50px;
-    padding:50px;
-    background:white;
-}
-
-.stat{
-    text-align:center;
-}
-
-.stat h2{
-    color:#0A2342;
-    font-size:40px;
-}
-
-<section class="hero">
-
-    <h2>Our Mission</h2>
-
-    <p>
-        YouthRise exists to connect young people with opportunities,
-        education, funding and career growth.
-    </p>
-
-</section>
 .logo{
-    font-size:32px;
-    font-weight:bold;
-    color:white;
-}
-.tagline{
-    font-size:14px;
-    margin-top:5px;
+display:flex;
+align-items:center;
+gap:12px;
 }
 
-.about{
-    background:#ffffff;
-    text-align:center;
-    padding:60px 20px;
-}
-
-.about h2{
-    color:#0A2342;
-}
-
-.about p{
-    max-width:700px;
-    margin:auto;
-    line-height:1.6;
-}
-textarea{
-    width:60%;
-    max-width:500px;
-    height:120px;
-    padding:15px;
-    border-radius:8px;
-}
-
-textarea{
-    width:60%;
-    max-width:500px;
-    height:120px;
-    padding:15px;
-    border-radius:8px;
-}
-.dashboard{
-    text-align:center;
-    padding:60px 20px;
-    background:#f8f8f8;
-}
-
-.dashboard h2{
-    color:#0A2342;
-}
-nav{
-    display:flex;
-    gap:20px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#D4AF37;
-}
-
-
-button{
-    background:#D4AF37;
-    color:white;
-    border:none;
-    padding:12px 24px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-button:hover{
-    transform:scale(1.05);
-}
-.hero h2{
-    font-size:48px;
-}
-
-.hero p{
-    font-size:18px;
-    max-width:700px;
-    margin:auto;
-}
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-
-
-
-}.logo-box{
-    background:linear-gradient(135deg,#D4AF37,#FFD700);
-    color:white;
-    width:55px;
-    height:55px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:12px;
-    font-weight:bold;
-    font-size:24px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+.logo-box{
+background:linear-gradient(135deg,#D4AF37,#FFD700);
+color:white;
+width:55px;
+height:55px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:12px;
+font-size:24px;
+font-weight:bold;
 }
 
 .logo-text{
-    color:white;
-    font-size:30px;
-    font-weight:bold;
+font-size:30px;
+font-weight:bold;
+color:white;
+}
+
+nav{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover
+
+.hero{
+text-align:center;
+padding:80px 20px;
+background:white;
+}
+
+.hero h2{
+font-size:48px;
+}
+
+.hero p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+}
+
+button{
+background:#D4AF37;
+color:white;
+border:none;
+padding:12px 24px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+input{
+width:60%;
+max-width:500px;
+padding:15px;
+margin:20px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:16px;
+}
+
+textarea{
+width:60%;
+max-width:500px;
+height:120px;
+padding:15px;
+border-radius:8px;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+padding:40px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+width:250px;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.stats{
+display:flex;
+justify-content:center;
+gap:50px;
+padding:50px;
+background:white;
+flex-wrap:wrap;
+}
+
+.stat{
+text-align:center;
+}
+
+.stat h2{
+color:#0A2342;
+font-size:40px;
+}
+
+.about{
+background:white;
+text-align:center;
+padding:60px 20px;
+}
+
+.about h2{
+color:#0A2342;
+}
+
+.about p{
+max-width:700px;
+margin:auto;
+line-height:1.6;
+}
+
+.dashboard{
+text-align:center;
+padding:60px 20px;
+}
+
+footer{
+background:#0A2342;
+color:white;
+text-align:center;
+padding:20px;
 }
 
 .funding-hero{
-    background:linear-gradient(135deg,#0A2342,#123D6A);
-    color:white;
-    padding:80px 20px;
-    text-align:center;
-    border-radius:0 0 30px 30px;
+background:linear-gradient(135deg,#0A2342,#123D6A);
+color:white;
+padding:80px 20px;
+text-align:center;
+border-radius:0 0 30px 30px;
 }
 
 .funding-hero h2{
-    font-size:50px;
-    margin-bottom:20px;
+font-size:50px;
 }
 
 .funding-hero p{
-    max-width:700px;
-    margin:auto;
-    font-size:20px;
-    line-height:1.6;
+max-width:700px;
+margin:auto;
+font-size:20px;
 }
