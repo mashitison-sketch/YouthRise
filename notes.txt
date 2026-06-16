@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
-    <title>Notes - YouthRise</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Study Notes - YouthRise</title>
+
+```
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+```
+
 </head>
 
 <body>
 
 <header>
-    <div class="logo">
-        <div class="logo-box">YR</div>
-        <div class="logo-text">YouthRise</div>
-    </div>
+
+```
+<div class="logo">
+    <div class="logo-box">YR</div>
+    <div class="logo-text">YouthRise</div>
+</div>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="notes.html">Notes</a>
+</nav>
+```
+
 </header>
 
 <section class="hero">
@@ -23,17 +37,152 @@
 ```
 <h2>📝 Study Notes</h2>
 
-<p>Keep track of your learning and revision notes.</p>
+<p>
+    Access subject summaries, revision notes and study
+    resources designed to help learners succeed.
+</p>
+```
 
-<textarea placeholder="Write your notes here..."></textarea>
+</section>
+
+<section class="about">
+
+```
+<h2>📚 Notes Library</h2>
+
+<p>
+    Browse notes by subject and use them together with
+    School Helper, AI Tutor and Past Papers.
+</p>
+```
+
+</section>
+
+<section class="cards">
+
+```
+<div class="card">
+    <h3>📘 Mathematics</h3>
+    <p>Algebra, Geometry, Trigonometry and Calculus notes.</p>
+</div>
+
+<div class="card">
+    <h3>📖 English</h3>
+    <p>Language, Literature and Essay Writing support.</p>
+</div>
+
+<div class="card">
+    <h3>🧪 Natural Sciences</h3>
+    <p>Scientific concepts and revision summaries.</p>
+</div>
+
+<div class="card">
+    <h3>⚛️ Physical Sciences</h3>
+    <p>Physics and Chemistry study resources.</p>
+</div>
+```
+
+</section>
+
+<section class="cards">
+
+```
+<div class="card">
+    <h3>🌱 Life Sciences</h3>
+    <p>Biology, ecosystems and life processes.</p>
+</div>
+
+<div class="card">
+    <h3>🌍 Geography</h3>
+    <p>Maps, climate and geographical concepts.</p>
+</div>
+
+<div class="card">
+    <h3>🏛️ History</h3>
+    <p>Historical events, timelines and source work.</p>
+</div>
+
+<div class="card">
+    <h3>📊 Accounting</h3>
+    <p>Financial statements and accounting principles.</p>
+</div>
+```
+
+</section>
+
+<section class="cards">
+
+```
+<div class="card">
+    <h3>💼 Business Studies</h3>
+    <p>Business concepts and case study revision.</p>
+</div>
+
+<div class="card">
+    <h3>📈 Economics</h3>
+    <p>Economic systems and market structures.</p>
+</div>
+
+<div class="card">
+    <h3>💻 CAT</h3>
+    <p>Computer Applications Technology notes.</p>
+</div>
+
+<div class="card">
+    <h3>❤️ Life Orientation</h3>
+    <p>Personal growth and career guidance resources.</p>
+</div>
+```
+
+</section>
+
+<section class="about">
+
+```
+<h2>✍️ Personal Study Notes</h2>
+
+<textarea placeholder="Write and organise your own study notes here..."></textarea>
+```
+
+</section>
+
+<section class="stats">
+
+```
+<div class="stat">
+    <h2>25+</h2>
+    <p>Subjects Supported</p>
+</div>
+
+<div class="stat">
+    <h2>Grade 6–12</h2>
+    <p>Learner Support</p>
+</div>
+
+<div class="stat">
+    <h2>Free</h2>
+    <p>Study Resources</p>
+</div>
 ```
 
 </section>
 
 <footer>
-    <h3>YouthRise</h3>
+
+```
+<h3>YouthRise</h3>
+
+<p>One Platform. Endless Opportunities.</p>
+
+<p>
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms & Conditions</a>
+</p>
+
+<p>© 2026 YouthRise. All Rights Reserved.</p>
+```
+
 </footer>
 
 </body>
-
 </html>
