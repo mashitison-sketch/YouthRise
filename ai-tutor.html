@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
-    <title>AI Tutor - YouthRise</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>AI Tutor - YouthRise</title>
+
+```
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+```
+
 </head>
 
 <body>
@@ -34,9 +39,30 @@
 <h2>🤖 YouthRise AI Tutor</h2>
 
 <p>
-    Your future study assistant for Grade 6–12 learning.
-    Get explanations, revision help, study plans and subject support.
+    Ask study questions and get learning guidance for
+    Grade 6–12 subjects.
 </p>
+```
+
+</section>
+
+<section class="about">
+
+```
+<h2>Ask a Question</h2>
+
+<input type="text" id="question"
+    placeholder="Example: What is photosynthesis?">
+
+<br><br>
+
+<button onclick="answerQuestion()">Ask AI Tutor</button>
+
+<br><br>
+
+<div id="answer">
+    Your answer will appear here.
+</div>
 ```
 
 </section>
@@ -46,53 +72,18 @@
 ```
 <div class="card">
     <h3>📘 Mathematics</h3>
-    <p>Step-by-step help with calculations and problem solving.</p>
+    <p>Algebra, Geometry, Trigonometry and Calculus.</p>
 </div>
 
 <div class="card">
     <h3>🧪 Sciences</h3>
-    <p>Understand scientific concepts and exam questions.</p>
+    <p>Physical Sciences, Natural Sciences and Life Sciences.</p>
 </div>
 
 <div class="card">
     <h3>📖 Languages</h3>
-    <p>Grammar, comprehension, essays and writing support.</p>
+    <p>English, Afrikaans and language support.</p>
 </div>
-```
-
-</section>
-
-<section class="cards">
-
-```
-<div class="card">
-    <h3>📊 Commerce</h3>
-    <p>Accounting, Economics and Business Studies support.</p>
-</div>
-
-<div class="card">
-    <h3>💻 Technology</h3>
-    <p>IT, CAT and technology subject assistance.</p>
-</div>
-
-<div class="card">
-    <h3>🎯 Exam Preparation</h3>
-    <p>Study plans, revision tips and exam strategies.</p>
-</div>
-```
-
-</section>
-
-<section class="about">
-
-```
-<h2>Future Features</h2>
-
-<p>
-    The YouthRise AI Tutor will eventually answer questions,
-    explain difficult concepts, generate quizzes and provide
-    personalised learning support.
-</p>
 ```
 
 </section>
@@ -102,7 +93,7 @@
 ```
 <div class="stat">
     <h2>24/7</h2>
-    <p>Learning Support</p>
+    <p>Study Support</p>
 </div>
 
 <div class="stat">
@@ -111,8 +102,8 @@
 </div>
 
 <div class="stat">
-    <h2>AI</h2>
-    <p>Future Powered Learning</p>
+    <h2>25+</h2>
+    <p>Subjects</p>
 </div>
 ```
 
@@ -135,6 +126,38 @@
 
 </footer>
 
-</body>
+<script>
+function answerQuestion() {
 
+    let question =
+        document.getElementById("question").value.toLowerCase();
+
+    let answer =
+        "Thanks for your question. A full AI system will be added in a future update.";
+
+    if (question.includes("photosynthesis")) {
+        answer =
+        "Photosynthesis is the process plants use to convert sunlight, water and carbon dioxide into food and oxygen.";
+    }
+
+    else if (question.includes("algebra")) {
+        answer =
+        "Algebra uses symbols and letters to represent numbers and solve equations.";
+    }
+
+    else if (question.includes("history")) {
+        answer =
+        "History studies past events and helps us understand how societies developed.";
+    }
+
+    else if (question.includes("geography")) {
+        answer =
+        "Geography studies the Earth, people, environments and places.";
+    }
+
+    document.getElementById("answer").innerHTML = answer;
+}
+</script>
+
+</body>
 </html>
