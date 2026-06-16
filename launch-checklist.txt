@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Launch Checklist - YouthRise</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <div class="logo-box">YR</div>
+        <div class="logo-text">YouthRise</div>
+    </div>
+</header>
+
+<section class="hero">
+
+```
+<h2>✅ YouthRise Launch Checklist</h2>
+
+<p>Track your progress before launch.</p>
+```
+
+</section>
+
+<section class="cards">
+
+```
+<div class="card">✅ Homepage Complete</div>
+<div class="card">✅ School Helper Complete</div>
+<div class="card">✅ AI Tutor Complete</div>
+<div class="card">✅ Past Papers Complete</div>
+<div class="card">✅ Contact Page Complete</div>
+<div class="card">✅ Mobile Friendly Design</div>
+<div class="card">⬜ Google Indexing</div>
+<div class="card">⬜ Real AI Integration</div>
+<div class="card">⬜ User Accounts</div>
+```
+
+</section>
+
+<footer>
+    <h3>YouthRise</h3>
+    <p>One Platform. Endless Opportunities.</p>
+</footer>
+
+</body>
+
+</html>
