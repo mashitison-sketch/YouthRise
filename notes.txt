@@ -1,19 +1,39 @@
-YouthRise Vision
+<!DOCTYPE html>
 
-Mission:
-Help young people find opportunities.
+<html>
 
-Core Features:
-- Jobs
-- Bursaries
-- Learnerships
-- Funding
-- CV Builder
-- Goal Tracking
-- Courses
+<head>
+    <title>Notes - YouthRise</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-Target Users:
-Students
-Graduates
-Job Seekers
-Young Entrepreneurs
+<body>
+
+<header>
+    <div class="logo">
+        <div class="logo-box">YR</div>
+        <div class="logo-text">YouthRise</div>
+    </div>
+</header>
+
+<section class="hero">
+
+```
+<h2>📝 Study Notes</h2>
+
+<p>Keep track of your learning and revision notes.</p>
+
+<textarea placeholder="Write your notes here..."></textarea>
+```
+
+</section>
+
+<footer>
+    <h3>YouthRise</h3>
+</footer>
+
+</body>
+
+</html>
