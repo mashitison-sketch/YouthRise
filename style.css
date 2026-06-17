@@ -1,9 +1,14 @@
 body{
-font-family: Arial, sans-serif;
+font-family:Arial,sans-serif;
 margin:0;
 padding:0;
 background:#f5f5f5;
 color:#333;
+line-height:1.6;
+}
+
+*{
+box-sizing:border-box;
 }
 
 header{
@@ -51,10 +56,14 @@ nav a{
 color:white;
 text-decoration:none;
 font-weight:bold;
+padding:8px 12px;
+border-radius:6px;
 transition:0.3s;
 }
 
-nav a:hover
+nav a:hover{
+background:rgba(255,255,255,0.15);
+}
 
 .hero{
 background:white;
@@ -79,10 +88,20 @@ input{
 width:60%;
 max-width:500px;
 padding:15px;
-margin-top:25px;
 border:1px solid #ccc;
 border-radius:10px;
 font-size:16px;
+}
+
+textarea{
+width:90%;
+max-width:700px;
+height:150px;
+padding:15px;
+border:1px solid #ccc;
+border-radius:10px;
+font-size:16px;
+resize:vertical;
 }
 
 button{
@@ -124,6 +143,7 @@ transform:translateY(-8px);
 
 .card h3{
 color:#0A2342;
+margin-top:0;
 }
 
 .about{
@@ -168,70 +188,72 @@ text-align:center;
 padding:30px 20px;
 }
 
-textarea{
-width:90%;
-max-width:600px;
-height:120px;
-padding:15px;
-border-radius:10px;
-border:1px solid #ccc;
+footer a{
+color:#FFD700;
+text-decoration:none;
+}
+
+footer a:hover{
+text-decoration:underline;
 }
 
 @media screen and (max-width:768px){
 
-```
 header{
-    flex-direction:column;
-    text-align:center;
+flex-direction:column;
+text-align:center;
 }
 
 nav{
-    justify-content:center;
-    margin-top:15px;
+justify-content:center;
+margin-top:15px;
 }
 
 nav a{
-    font-size:14px;
+font-size:14px;
 }
 
 .hero{
-    padding:50px 15px;
+padding:50px 15px;
 }
 
 .hero h2{
-    font-size:32px;
+font-size:32px;
 }
 
 .hero p{
-    font-size:16px;
+font-size:16px;
 }
 
 input{
-    width:90%;
+width:90%;
+}
+
+textarea{
+width:95%;
 }
 
 .cards{
-    flex-direction:column;
-    align-items:center;
+flex-direction:column;
+align-items:center;
 }
 
 .card{
-    width:90%;
+width:90%;
 }
 
 .stats{
-    flex-direction:column;
-    gap:20px;
+flex-direction:column;
+gap:20px;
 }
 
 .logo-text{
-    font-size:24px;
+font-size:24px;
 }
 
 button{
-    width:90%;
-    max-width:300px;
+width:90%;
+max-width:320px;
 }
-```
 
 }
