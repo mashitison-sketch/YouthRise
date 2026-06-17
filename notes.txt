@@ -134,17 +134,60 @@
 </div>
 ```
 
-</section>
-
 <section class="about">
 
-```
 <h2>✍️ Personal Study Notes</h2>
 
-<textarea placeholder="Write and organise your own study notes here..."></textarea>
-```
+<p>Your notes are automatically saved on this device.</p>
+
+<textarea id="studyNotes" placeholder="Write and organise your own study notes here..."></textarea>
+
+<br><br>
+
+<button onclick="saveNotes()">💾 Save Notes</button>
+
+<button onclick="clearNotes()">🗑️ Clear Notes</button>
+
+<p id="saveMessage"></p>
 
 </section>
+
+<script>
+
+const notesBox = document.getElementById("studyNotes");
+
+window.onload = function () {
+const savedNotes = localStorage.getItem("youthrise_notes");
+
+if(savedNotes){
+notesBox.value = savedNotes;
+}
+}
+
+function saveNotes(){
+localStorage.setItem("youthrise_notes", notesBox.value);
+
+document.getElementById("saveMessage").innerHTML =
+"✅ Notes saved successfully!";
+}
+
+function clearNotes(){
+
+if(confirm("Delete all saved notes?")){
+
+localStorage.removeItem("youthrise_notes");
+
+notesBox.value = "";
+
+document.getElementById("saveMessage").innerHTML =
+"🗑️ Notes cleared.";
+
+}
+
+}
+
+</script>
+
 
 <section class="stats">
 
