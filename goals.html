@@ -38,9 +38,26 @@
 <h2>🎯 Goals Tracker</h2>
 
 <p>
-    Set meaningful goals, stay motivated and monitor your
-    academic, career and personal development journey.
+    Create goals and save them on your device.
 </p>
+```
+
+</section>
+
+<section class="about">
+
+```
+<h2>📝 My Goals</h2>
+
+<textarea id="goalBox" placeholder="Write your goals here..."></textarea>
+
+<br><br>
+
+<button onclick="saveGoals()">💾 Save Goals</button>
+
+<button onclick="clearGoals()">🗑️ Clear Goals</button>
+
+<p id="goalMessage"></p>
 ```
 
 </section>
@@ -50,61 +67,17 @@
 ```
 <div class="card">
     <h3>📚 Academic Goals</h3>
-    <p>
-        Improve grades, complete assignments,
-        prepare for exams and build study habits.
-    </p>
+    <p>Improve grades and study habits.</p>
 </div>
 
 <div class="card">
     <h3>💼 Career Goals</h3>
-    <p>
-        Explore careers, build a CV, apply for opportunities
-        and prepare for your future.
-    </p>
+    <p>Prepare for opportunities and future success.</p>
 </div>
 
 <div class="card">
     <h3>🚀 Personal Growth</h3>
-    <p>
-        Develop confidence, communication skills,
-        leadership and discipline.
-    </p>
-</div>
-```
-
-</section>
-
-<section class="about">
-
-```
-<h2>Goal Setting Tips</h2>
-
-<p>
-    Set clear goals, break them into smaller tasks,
-    track progress regularly and celebrate achievements
-    along the way.
-</p>
-```
-
-</section>
-
-<section class="cards">
-
-```
-<div class="card">
-    <h3>✅ Daily Goals</h3>
-    <p>Small actions that move you forward every day.</p>
-</div>
-
-<div class="card">
-    <h3>📅 Monthly Goals</h3>
-    <p>Track important milestones and achievements.</p>
-</div>
-
-<div class="card">
-    <h3>🏆 Long-Term Goals</h3>
-    <p>Focus on your future education and career plans.</p>
+    <p>Build confidence and life skills.</p>
 </div>
 ```
 
@@ -120,12 +93,12 @@
 
 <div class="stat">
     <h2>100%</h2>
-    <p>Personal Growth Focused</p>
+    <p>Growth Focused</p>
 </div>
 
 <div class="stat">
-    <h2>Future Ready</h2>
-    <p>Success Mindset</p>
+    <h2>Future</h2>
+    <p>Ready</p>
 </div>
 ```
 
@@ -147,6 +120,52 @@
 ```
 
 </footer>
+
+<script>
+
+const goalBox = document.getElementById("goalBox");
+
+window.onload = function(){
+
+const savedGoals =
+localStorage.getItem("youthrise_goals");
+
+if(savedGoals){
+goalBox.value = savedGoals;
+}
+
+}
+
+function saveGoals(){
+
+localStorage.setItem(
+"youthrise_goals",
+goalBox.value
+);
+
+document.getElementById("goalMessage").innerHTML =
+"✅ Goals saved successfully!";
+
+}
+
+function clearGoals(){
+
+if(confirm("Delete all goals?")){
+
+localStorage.removeItem(
+"youthrise_goals"
+);
+
+goalBox.value = "";
+
+document.getElementById("goalMessage").innerHTML =
+"🗑️ Goals cleared.";
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
