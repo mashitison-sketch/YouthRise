@@ -38,8 +38,8 @@
 <h2>📄 YouthRise CV Builder</h2>
 
 <p>
-    Create a professional CV to help you apply for jobs,
-    internships, learnerships, scholarships and bursaries.
+    Create a professional CV for jobs, internships,
+    learnerships, scholarships and bursaries.
 </p>
 ```
 
@@ -50,19 +50,19 @@
 ```
 <h2>👤 Personal Information</h2>
 
-<input type="text" placeholder="Full Name">
+<input type="text" id="fullName" placeholder="Full Name">
 
 <br><br>
 
-<input type="email" placeholder="Email Address">
+<input type="email" id="email" placeholder="Email Address">
 
 <br><br>
 
-<input type="text" placeholder="Phone Number">
+<input type="text" id="phone" placeholder="Phone Number">
 
 <br><br>
 
-<input type="text" placeholder="Location">
+<input type="text" id="location" placeholder="Location">
 ```
 
 </section>
@@ -72,7 +72,7 @@
 ```
 <h2>🎓 Education</h2>
 
-<textarea placeholder="Enter your school, qualifications, achievements and academic information..."></textarea>
+<textarea id="education" placeholder="Enter your education details..."></textarea>
 ```
 
 </section>
@@ -82,7 +82,7 @@
 ```
 <h2>💡 Skills</h2>
 
-<textarea placeholder="List your skills, talents, strengths and abilities..."></textarea>
+<textarea id="skills" placeholder="List your skills..."></textarea>
 ```
 
 </section>
@@ -92,7 +92,7 @@
 ```
 <h2>💼 Experience</h2>
 
-<textarea placeholder="Work experience, volunteering, leadership positions and activities..."></textarea>
+<textarea id="experience" placeholder="Work experience, volunteering and leadership..."></textarea>
 ```
 
 </section>
@@ -102,7 +102,7 @@
 ```
 <h2>🏆 Achievements</h2>
 
-<textarea placeholder="Awards, certificates, academic achievements and recognitions..."></textarea>
+<textarea id="achievements" placeholder="Awards, certificates and achievements..."></textarea>
 ```
 
 </section>
@@ -112,58 +112,19 @@
 ```
 <h2>🎯 Career Goals</h2>
 
-<textarea placeholder="Describe your future goals and career ambitions..."></textarea>
+<textarea id="goals" placeholder="Describe your career goals..."></textarea>
 
 <br><br>
 
-<button>Generate CV (Coming Soon)</button>
+<button onclick="generateCV()">📄 Generate CV</button>
 ```
 
 </section>
 
-<section class="cards">
+<section class="about">
 
 ```
-<div class="card">
-    <h3>✅ Professional Format</h3>
-    <p>Create a clean and organised CV.</p>
-</div>
-
-<div class="card">
-    <h3>💼 Career Ready</h3>
-    <p>Perfect for jobs, internships and learnerships.</p>
-</div>
-
-<div class="card">
-    <h3>🎓 Education Focused</h3>
-    <p>Ideal for bursary and scholarship applications.</p>
-</div>
-
-<div class="card">
-    <h3>🚀 Future Upgrade</h3>
-    <p>Downloadable CV generation coming soon.</p>
-</div>
-```
-
-</section>
-
-<section class="stats">
-
-```
-<div class="stat">
-    <h2>CV</h2>
-    <p>Career Development</p>
-</div>
-
-<div class="stat">
-    <h2>Jobs</h2>
-    <p>Application Ready</p>
-</div>
-
-<div class="stat">
-    <h2>Future</h2>
-    <p>Professional Growth</p>
-</div>
+<div id="cvOutput"></div>
 ```
 
 </section>
@@ -184,6 +145,50 @@
 ```
 
 </footer>
+
+<script>
+
+function generateCV(){
+
+const name = document.getElementById("fullName").value;
+const email = document.getElementById("email").value;
+const phone = document.getElementById("phone").value;
+const location = document.getElementById("location").value;
+
+const education = document.getElementById("education").value;
+const skills = document.getElementById("skills").value;
+const experience = document.getElementById("experience").value;
+const achievements = document.getElementById("achievements").value;
+const goals = document.getElementById("goals").value;
+
+document.getElementById("cvOutput").innerHTML = `
+<div style="background:white;padding:25px;border-radius:15px;text-align:left;">
+<h2>${name}</h2>
+
+<p><strong>Email:</strong> ${email}</p>
+<p><strong>Phone:</strong> ${phone}</p>
+<p><strong>Location:</strong> ${location}</p>
+
+<h3>Education</h3>
+<p>${education}</p>
+
+<h3>Skills</h3>
+<p>${skills}</p>
+
+<h3>Experience</h3>
+<p>${experience}</p>
+
+<h3>Achievements</h3>
+<p>${achievements}</p>
+
+<h3>Career Goals</h3>
+<p>${goals}</p>
+</div>
+`;
+
+}
+
+</script>
 
 </body>
 </html>
