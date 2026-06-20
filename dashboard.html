@@ -37,10 +37,16 @@
 ```
 <h2>📊 Student Dashboard</h2>
 
+<h3 id="welcomeUser"></h3>
+
 <p>
     Welcome to your YouthRise dashboard. Track your learning,
     goals, opportunities and personal growth journey.
 </p>
+
+<br>
+
+<button onclick="logoutUser()">🚪 Logout</button>
 ```
 
 </section>
@@ -50,23 +56,17 @@
 ```
 <div class="card">
     <h3>📚 School Helper</h3>
-    <p>
-        Access learning resources for Grade 6–12 subjects.
-    </p>
+    <p>Access learning resources for Grade 6–12 subjects.</p>
 </div>
 
 <div class="card">
     <h3>🤖 AI Tutor</h3>
-    <p>
-        Get academic support and study assistance.
-    </p>
+    <p>Get academic support and study assistance.</p>
 </div>
 
 <div class="card">
     <h3>📄 Past Papers</h3>
-    <p>
-        Practice with revision materials and exam preparation.
-    </p>
+    <p>Practice with revision materials and exam preparation.</p>
 </div>
 ```
 
@@ -77,23 +77,17 @@
 ```
 <div class="card">
     <h3>💼 Opportunities</h3>
-    <p>
-        Explore internships, learnerships and career pathways.
-    </p>
+    <p>Explore internships, learnerships and career pathways.</p>
 </div>
 
 <div class="card">
     <h3>💰 Funding</h3>
-    <p>
-        Discover bursaries, grants and financial support.
-    </p>
+    <p>Discover bursaries, grants and financial support.</p>
 </div>
 
 <div class="card">
     <h3>🎯 Goals</h3>
-    <p>
-        Track your academic and career goals.
-    </p>
+    <p>Track your academic and career goals.</p>
 </div>
 ```
 
@@ -120,19 +114,6 @@
 
 </section>
 
-<section class="about">
-
-```
-<h2>🚀 Your Progress Journey</h2>
-
-<p>
-    YouthRise helps learners build skills, improve results,
-    discover opportunities and prepare for future success.
-</p>
-```
-
-</section>
-
 <footer>
 
 ```
@@ -149,6 +130,25 @@
 ```
 
 </footer>
+
+<script>
+
+const userName = localStorage.getItem("youthrise_name");
+
+if(userName){
+document.getElementById("welcomeUser").innerHTML =
+"Welcome back, " + userName + " 👋";
+}
+
+function logoutUser(){
+
+localStorage.removeItem("youthrise_logged_in");
+
+window.location.href = "login.html";
+
+}
+
+</script>
 
 </body>
 </html>
