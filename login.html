@@ -33,8 +33,7 @@
 <h2>🔐 Login</h2>
 
 <p>
-    Access your YouthRise account to continue your
-    learning journey.
+    Access your YouthRise account.
 </p>
 
 <br>
@@ -53,5 +52,67 @@
 
 <br>
 
-<
+<p>
+    Don't have an account?
+    <a href="signup.html">Create one here</a>
+</p>
 ```
+
+</section>
+
+<footer>
+
+```
+<h3>YouthRise</h3>
+
+<p>One Platform. Endless Opportunities.</p>
+
+<p>© 2026 YouthRise. All Rights Reserved.</p>
+```
+
+</footer>
+
+<script>
+
+function loginUser(){
+
+const email = document.getElementById("loginEmail").value;
+const password = document.getElementById("loginPassword").value;
+
+const savedEmail =
+localStorage.getItem("youthrise_email");
+
+const savedPassword =
+localStorage.getItem("youthrise_password");
+
+if(email === savedEmail &&
+password === savedPassword){
+
+localStorage.setItem(
+"youthrise_logged_in",
+"true"
+);
+
+document.getElementById("loginMessage").innerHTML =
+"✅ Login successful!";
+
+setTimeout(function(){
+
+window.location.href =
+"dashboard.html";
+
+}, 1500);
+
+}else{
+
+document.getElementById("loginMessage").innerHTML =
+"❌ Invalid email or password.";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
