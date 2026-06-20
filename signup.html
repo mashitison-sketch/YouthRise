@@ -39,25 +39,27 @@
 
 <br>
 
-<input type="text" placeholder="Full Name">
+<input type="text" id="signupName" placeholder="Full Name">
 
 <br><br>
 
-<input type="email" placeholder="Email Address">
+<input type="email" id="signupEmail" placeholder="Email Address">
 
 <br><br>
 
-<input type="password" placeholder="Create Password">
+<input type="password" id="signupPassword" placeholder="Create Password">
 
 <br><br>
 
-<input type="password" placeholder="Confirm Password">
+<input type="password" id="confirmPassword" placeholder="Confirm Password">
 
 <br><br>
 
-<button>Create Account</button>
+<button onclick="createAccount()">Create Account</button>
 
-<br><br>
+<p id="signupMessage"></p>
+
+<br>
 
 <p>
     Already have an account?
@@ -105,6 +107,35 @@
 
 </footer>
 
-</body>
+<script>
 
+function createAccount(){
+
+const name = document.getElementById("signupName").value;
+const email = document.getElementById("signupEmail").value;
+const password = document.getElementById("signupPassword").value;
+const confirmPassword = document.getElementById("confirmPassword").value;
+
+if(password !== confirmPassword){
+document.getElementById("signupMessage").innerHTML =
+"❌ Passwords do not match.";
+return;
+}
+
+localStorage.setItem("youthrise_name", name);
+localStorage.setItem("youthrise_email", email);
+localStorage.setItem("youthrise_password", password);
+
+document.getElementById("signupMessage").innerHTML =
+"✅ Account created successfully!";
+
+setTimeout(function(){
+window.location.href = "login.html";
+}, 1500);
+
+}
+
+</script>
+
+</body>
 </html>
