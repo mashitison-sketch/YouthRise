@@ -71,23 +71,25 @@
 ```
 <h2>Send a Message</h2>
 
-<input type="text" placeholder="Your Name">
+<input type="text" id="contactName" placeholder="Your Name">
 
 <br><br>
 
-<input type="email" placeholder="Your Email">
+<input type="email" id="contactEmail" placeholder="Your Email">
 
 <br><br>
 
-<input type="text" placeholder="Subject">
+<input type="text" id="contactSubject" placeholder="Subject">
 
 <br><br>
 
-<textarea placeholder="Write your message here..."></textarea>
+<textarea id="contactMessageBox" placeholder="Write your message here..."></textarea>
 
 <br><br>
 
-<button>Send Message</button>
+<button onclick="sendMessage()">Send Message</button>
+
+<p id="contactStatus"></p>
 ```
 
 </section>
@@ -137,6 +139,41 @@
 ```
 
 </footer>
+
+<script>
+
+function sendMessage(){
+
+const name = document.getElementById("contactName").value;
+const email = document.getElementById("contactEmail").value;
+const subject = document.getElementById("contactSubject").value;
+const message = document.getElementById("contactMessageBox").value;
+
+if(name === "" || email === "" || subject === "" || message === ""){
+
+document.getElementById("contactStatus").innerHTML =
+"❌ Please complete all fields.";
+
+return;
+
+}
+
+localStorage.setItem("contact_name", name);
+localStorage.setItem("contact_email", email);
+localStorage.setItem("contact_subject", subject);
+localStorage.setItem("contact_message", message);
+
+document.getElementById("contactStatus").innerHTML =
+"✅ Message sent successfully!";
+
+document.getElementById("contactName").value = "";
+document.getElementById("contactEmail").value = "";
+document.getElementById("contactSubject").value = "";
+document.getElementById("contactMessageBox").value = "";
+
+}
+
+</script>
 
 </body>
 </html>
