@@ -3,15 +3,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Past Papers - YouthRise</title>
 
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-```
 
 </head>
 
@@ -19,171 +16,226 @@
 
 <header>
 
-```
 <div class="logo">
-    <div class="logo-box">YR</div>
-    <div class="logo-text">YouthRise</div>
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
 </div>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="school-helper.html">School Helper</a>
-    <a href="ai-tutor.html">AI Tutor</a>
-    <a href="past-papers.html">Past Papers</a>
+<a href="index.html">Home</a>
+<a href="school-helper.html">School Helper</a>
+<a href="ai-tutor.html">AI Tutor</a>
+<a href="past-papers.html">Past Papers</a>
 </nav>
-```
 
 </header>
 
 <section class="hero">
 
-```
 <h2>📄 Past Papers & Exam Preparation</h2>
 
 <p>
-    Prepare for tests, examinations and final assessments
-    using revision resources, study guides and subject practice.
+Prepare for tests, examinations and final assessments
+using revision resources, study guides and subject practice.
 </p>
-```
 
 </section>
 
 <section class="about">
 
-```
-<h2>📚 Available Subjects</h2>
+<h2>🔍 Past Paper Finder</h2>
 
-<p>
-    Access revision support for Grade 6–12 subjects across
-    Mathematics, Sciences, Languages, Commerce, Technology,
-    Humanities and Creative Arts.
-</p>
-```
+<p>Select a subject and receive revision guidance.</p>
 
-</section>
+<select id="subjectSelect" style="padding:12px;border-radius:10px;width:250px;">
+<option value="">Choose Subject</option>
+<option>Mathematics</option>
+<option>English</option>
+<option>Physical Sciences</option>
+<option>Life Sciences</option>
+<option>Geography</option>
+<option>History</option>
+<option>Accounting</option>
+<option>Business Studies</option>
+<option>Economics</option>
+</select>
 
-<section class="cards">
+<br><br>
 
-```
-<div class="card">
-    <h3>📘 Mathematics</h3>
-    <p>Algebra, Geometry, Trigonometry and Exam Revision.</p>
-</div>
+<button onclick="findPapers()">Find Resources</button>
 
-<div class="card">
-    <h3>📖 English</h3>
-    <p>Language, Literature, Essays and Comprehension.</p>
-</div>
+<br><br>
 
-<div class="card">
-    <h3>⚛ Physical Sciences</h3>
-    <p>Physics and Chemistry exam preparation.</p>
-</div>
-
-<div class="card">
-    <h3>🌱 Life Sciences</h3>
-    <p>Biology, Ecology and Scientific Investigations.</p>
-</div>
-
-<div class="card">
-    <h3>🌍 Geography</h3>
-    <p>Maps, GIS, Climate and Human Geography.</p>
-</div>
-
-<div class="card">
-    <h3>🏛 History</h3>
-    <p>Source Analysis and Essay Writing Practice.</p>
-</div>
-```
+<p id="paperResult"></p>
 
 </section>
 
 <section class="cards">
 
-```
 <div class="card">
-    <h3>📊 Accounting</h3>
-    <p>Financial Statements and Accounting Principles.</p>
+<h3>📘 Mathematics</h3>
+<p>Algebra, Geometry, Trigonometry and Exam Revision.</p>
 </div>
 
 <div class="card">
-    <h3>💼 Business Studies</h3>
-    <p>Business Concepts and Case Study Revision.</p>
+<h3>📖 English</h3>
+<p>Language, Literature, Essays and Comprehension.</p>
 </div>
 
 <div class="card">
-    <h3>📈 Economics</h3>
-    <p>Microeconomics and Macroeconomics Practice.</p>
+<h3>⚛️ Physical Sciences</h3>
+<p>Physics and Chemistry exam preparation.</p>
 </div>
 
 <div class="card">
-    <h3>💻 CAT</h3>
-    <p>Computer Applications Technology Revision.</p>
+<h3>🌱 Life Sciences</h3>
+<p>Biology, Ecology and Scientific Investigations.</p>
+</div>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>🌍 Geography</h3>
+<p>Maps, GIS, Climate and Human Geography.</p>
 </div>
 
 <div class="card">
-    <h3>🖥 Information Technology</h3>
-    <p>Programming and Systems Concepts.</p>
+<h3>🏛️ History</h3>
+<p>Source Analysis and Essay Writing Practice.</p>
 </div>
 
 <div class="card">
-    <h3>❤️ Life Orientation</h3>
-    <p>Personal Development and Career Guidance.</p>
+<h3>📊 Accounting</h3>
+<p>Financial Statements and Accounting Principles.</p>
 </div>
-```
+
+<div class="card">
+<h3>💼 Business Studies</h3>
+<p>Business Concepts and Case Study Revision.</p>
+</div>
 
 </section>
 
 <section class="about">
 
-```
 <h2>🎯 Exam Success Tips</h2>
 
 <p>
-    Create a study timetable, practice regularly,
-    review mistakes and use past papers to build confidence.
+Create a study timetable, practice regularly,
+review mistakes and use past papers to build confidence.
 </p>
-```
 
 </section>
 
 <section class="stats">
 
-```
 <div class="stat">
-    <h2>25+</h2>
-    <p>Subjects Supported</p>
+<h2>25+</h2>
+<p>Subjects Supported</p>
 </div>
 
 <div class="stat">
-    <h2>Grade 6–12</h2>
-    <p>Learner Support</p>
+<h2>Grade 6–12</h2>
+<p>Learner Support</p>
 </div>
 
 <div class="stat">
-    <h2>100%</h2>
-    <p>Free Study Resources</p>
+<h2>100%</h2>
+<p>Free Study Resources</p>
 </div>
-```
 
 </section>
 
 <footer>
 
-```
 <h3>YouthRise</h3>
 
 <p>One Platform. Endless Opportunities.</p>
 
 <p>
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms & Conditions</a>
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms.html">Terms & Conditions</a>
 </p>
 
 <p>© 2026 YouthRise. All Rights Reserved.</p>
-```
 
 </footer>
+
+<script>
+
+function findPapers(){
+
+let subject =
+document.getElementById("subjectSelect").value;
+
+let result =
+"Please choose a subject.";
+
+if(subject === "Mathematics"){
+result =
+"📘 Mathematics: Focus on Algebra, Geometry, Trigonometry and past exam questions.";
+}
+
+else if(subject === "English"){
+result =
+"📖 English: Practice comprehension, essays, summaries and language structures.";
+}
+
+else if(subject === "Physical Sciences"){
+result =
+"⚛️ Physical Sciences: Revise formulas, calculations and practical investigations.";
+}
+
+else if(subject === "Life Sciences"){
+result =
+"🌱 Life Sciences: Study diagrams, terminology and biological processes.";
+}
+
+else if(subject === "Geography"){
+result =
+"🌍 Geography: Focus on maps, GIS, climate and data interpretation.";
+}
+
+else if(subject === "History"){
+result =
+"🏛️ History: Practice source-based questions and essay writing.";
+}
+
+else if(subject === "Accounting"){
+result =
+"📊 Accounting: Work through financial statements and ledger exercises.";
+}
+
+else if(subject === "Business Studies"){
+result =
+"💼 Business Studies: Review business concepts and case studies.";
+}
+
+else if(subject === "Economics"){
+result =
+"📈 Economics: Focus on markets, macroeconomics and graph interpretation.";
+}
+
+document.getElementById("paperResult").innerHTML = result;
+
+localStorage.setItem("youthrise_pastpaper_subject", subject);
+
+}
+
+window.onload = function(){
+
+const savedSubject =
+localStorage.getItem("youthrise_pastpaper_subject");
+
+if(savedSubject){
+document.getElementById("subjectSelect").value = savedSubject;
+}
+
+}
+
+</script>
 
 </body>
 </html>
