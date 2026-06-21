@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Timer - YouthRise</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="study-timer.html">Study Timer</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>⏱️ Study Timer</h2>
+
+<p>Stay focused and manage your study sessions.</p>
+
+<h1 id="timer">25:00</h1>
+
+<button onclick="startTimer()">▶️ Start</button> <button onclick="pauseTimer()">⏸️ Pause</button> <button onclick="resetTimer()">🔄 Reset</button>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>📚 Focus Sessions</h3>
+<p>Use 25-minute study sessions for better concentration.</p>
+</div>
+
+<div class="card">
+<h3>🎯 Productivity</h3>
+<p>Track your study time and stay disciplined.</p>
+</div>
+
+<div class="card">
+<h3>🏆 Success</h3>
+<p>Small daily efforts create long-term results.</p>
+</div>
+
+</section>
+
+<footer>
+
+<h3>YouthRise</h3>
+
+<p>One Platform. Endless Opportunities.</p>
+
+<p>© 2026 YouthRise. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+let time = 1500;
+let timerRunning = false;
+let timerInterval;
+
+function updateDisplay() {
+
+let minutes = Math.floor(time / 60);
+let seconds = time % 60;
+
+document.getElementById("timer").innerHTML =
+String(minutes).padStart(2,'0') + ":" +
+String(seconds).padStart(2,'0');
+
+}
+
+function startTimer(){
+
+if(timerRunning) return;
+
+timerRunning = true;
+
+timerInterval = setInterval(function(){
+
+if(time > 0){
+
+time--;
+
+updateDisplay();
+
+}else{
+
+clearInterval(timerInterval);
+
+alert("🎉 Study session complete!");
+
+timerRunning = false;
+
+}
+
+},1000);
+
+}
+
+function pauseTimer(){
+
+clearInterval(timerInterval);
+
+timerRunning = false;
+
+}
+
+function resetTimer(){
+
+clearInterval(timerInterval);
+
+timerRunning = false;
+
+time = 1500;
+
+updateDisplay();
+
+}
+
+updateDisplay();
+
+</script>
+
+</body>
+</html>
