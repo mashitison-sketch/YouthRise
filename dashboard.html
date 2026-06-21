@@ -90,27 +90,63 @@
     <p>Track your academic and career goals.</p>
 </div>
 ```
-    <div class="card">
-    <h3>🧮 Marks Calculator</h3>
-    <p>Calculate your average marks and track your academic progress.</p>
 
+</section>
+
+<section class="cards">
+
+```
+<div class="card">
+    <h3>📝 Study Notes</h3>
+    <p>Save and organise your study notes.</p>
+    <br>
+    <a href="notes.html">
+        <button>Open Notes</button>
+    </a>
+</div>
+
+<div class="card">
+    <h3>📄 CV Builder</h3>
+    <p>Create and save your professional CV.</p>
+    <br>
+    <a href="cv-builder.html">
+        <button>Open CV Builder</button>
+    </a>
 </div>
 
 <div class="card">
     <h3>🧮 Marks Calculator</h3>
-    <p>
-        Calculate your average marks and track your academic progress.
-    </p>
-
-```
-<br>
-
-<a href="marks-calculator.html">
-    <button>Open Calculator</button>
-</a>
-```
-
+    <p>Calculate your average marks and track progress.</p>
+    <br>
+    <a href="marks-calculator.html">
+        <button>Open Calculator</button>
+    </a>
 </div>
+```
+
+</section>
+
+<section class="cards">
+
+```
+<div class="card">
+    <h3>📅 Daily Planner</h3>
+    <p>Plan your day and stay productive.</p>
+    <br>
+    <a href="daily-planner.html">
+        <button>Open Planner</button>
+    </a>
+</div>
+
+<div class="card">
+    <h3>📩 Contact Us</h3>
+    <p>Send feedback, questions and suggestions.</p>
+    <br>
+    <a href="contact.html">
+        <button>Contact</button>
+    </a>
+</div>
+```
 
 </section>
 
@@ -157,16 +193,13 @@
 const userName = localStorage.getItem("youthrise_name");
 
 if(userName){
-document.getElementById("welcomeUser").innerHTML =
-"Welcome back, " + userName + " 👋";
+    document.getElementById("welcomeUser").innerHTML =
+    "Welcome back, " + userName + " 👋";
 }
 
 function logoutUser(){
-
-localStorage.removeItem("youthrise_logged_in");
-
-window.location.href = "login.html";
-
+    localStorage.removeItem("youthrise_logged_in");
+    window.location.href = "login.html";
 }
 
 </script>
