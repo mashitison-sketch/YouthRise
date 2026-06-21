@@ -3,14 +3,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tutor - YouthRise</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tutor - YouthRise</title>
 
-```
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-```
 
 </head>
 
@@ -18,145 +16,204 @@
 
 <header>
 
-```
 <div class="logo">
-    <div class="logo-box">YR</div>
-    <div class="logo-text">YouthRise</div>
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
 </div>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="school-helper.html">School Helper</a>
-    <a href="ai-tutor.html">AI Tutor</a>
+<a href="index.html">Home</a>
+<a href="school-helper.html">School Helper</a>
+<a href="ai-tutor.html">AI Tutor</a>
 </nav>
-```
 
 </header>
 
 <section class="hero">
 
-```
 <h2>🤖 YouthRise AI Tutor</h2>
 
 <p>
-    Ask study questions and get learning guidance for
-    Grade 6–12 subjects.
+Ask study questions and get instant learning support.
 </p>
-```
 
 </section>
 
 <section class="about">
 
-```
 <h2>Ask a Question</h2>
 
-<input type="text" id="question"
-    placeholder="Example: What is photosynthesis?">
+<input
+type="text"
+id="question"
+placeholder="Example: What is photosynthesis?"
+
+>
 
 <br><br>
 
-<button onclick="answerQuestion()">Ask AI Tutor</button>
+<button onclick="answerQuestion()">
+Ask AI Tutor
+</button>
 
 <br><br>
 
 <div id="answer">
-    Your answer will appear here.
+Your answer will appear here.
 </div>
-```
 
 </section>
 
 <section class="cards">
 
-```
 <div class="card">
-    <h3>📘 Mathematics</h3>
-    <p>Algebra, Geometry, Trigonometry and Calculus.</p>
+<h3>📘 Mathematics</h3>
+<p>Algebra, Geometry and Problem Solving.</p>
 </div>
 
 <div class="card">
-    <h3>🧪 Sciences</h3>
-    <p>Physical Sciences, Natural Sciences and Life Sciences.</p>
+<h3>🧪 Sciences</h3>
+<p>Natural Sciences, Life Sciences and Physical Sciences.</p>
 </div>
 
 <div class="card">
-    <h3>📖 Languages</h3>
-    <p>English, Afrikaans and language support.</p>
+<h3>📖 Languages</h3>
+<p>English, Afrikaans and Writing Support.</p>
 </div>
-```
 
 </section>
 
 <section class="stats">
 
-```
 <div class="stat">
-    <h2>24/7</h2>
-    <p>Study Support</p>
+<h2>24/7</h2>
+<p>Study Support</p>
 </div>
 
 <div class="stat">
-    <h2>Grade 6–12</h2>
-    <p>Coverage</p>
+<h2>Grade 6–12</h2>
+<p>Coverage</p>
 </div>
 
 <div class="stat">
-    <h2>25+</h2>
-    <p>Subjects</p>
+<h2>25+</h2>
+<p>Subjects</p>
 </div>
-```
 
 </section>
 
 <footer>
 
-```
 <h3>YouthRise</h3>
 
 <p>One Platform. Endless Opportunities.</p>
 
 <p>
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms & Conditions</a>
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms.html">Terms & Conditions</a>
 </p>
 
 <p>© 2026 YouthRise. All Rights Reserved.</p>
-```
 
 </footer>
 
 <script>
-function answerQuestion() {
 
-    let question =
-        document.getElementById("question").value.toLowerCase();
+window.onload = function(){
 
-    let answer =
-        "Thanks for your question. A full AI system will be added in a future update.";
+const lastQuestion =
+localStorage.getItem("youthrise_last_question");
 
-    if (question.includes("photosynthesis")) {
-        answer =
-        "Photosynthesis is the process plants use to convert sunlight, water and carbon dioxide into food and oxygen.";
-    }
+const lastAnswer =
+localStorage.getItem("youthrise_last_answer");
 
-    else if (question.includes("algebra")) {
-        answer =
-        "Algebra uses symbols and letters to represent numbers and solve equations.";
-    }
-
-    else if (question.includes("history")) {
-        answer =
-        "History studies past events and helps us understand how societies developed.";
-    }
-
-    else if (question.includes("geography")) {
-        answer =
-        "Geography studies the Earth, people, environments and places.";
-    }
-
-    document.getElementById("answer").innerHTML = answer;
+if(lastQuestion){
+document.getElementById("question").value =
+lastQuestion;
 }
+
+if(lastAnswer){
+document.getElementById("answer").innerHTML =
+lastAnswer;
+}
+
+}
+
+function answerQuestion(){
+
+let question =
+document.getElementById("question").value;
+
+let search =
+question.toLowerCase();
+
+let answer =
+"Thanks for your question. More AI features are coming soon.";
+
+if(search.includes("photosynthesis")){
+
+answer =
+"Photosynthesis is the process plants use sunlight, water and carbon dioxide to make food and oxygen.";
+
+}
+
+else if(search.includes("algebra")){
+
+answer =
+"Algebra uses letters and symbols to represent numbers and solve equations.";
+
+}
+
+else if(search.includes("history")){
+
+answer =
+"History studies past events and helps us understand the world today.";
+
+}
+
+else if(search.includes("geography")){
+
+answer =
+"Geography studies places, people, environments and the Earth.";
+
+}
+
+else if(search.includes("science")){
+
+answer =
+"Science investigates the natural world through observation and experimentation.";
+
+}
+
+else if(search.includes("english")){
+
+answer =
+"English includes grammar, comprehension, literature and writing skills.";
+
+}
+
+else if(search.includes("math")){
+
+answer =
+"Mathematics involves numbers, patterns, measurements and problem solving.";
+
+}
+
+document.getElementById("answer").innerHTML =
+answer;
+
+localStorage.setItem(
+"youthrise_last_question",
+question
+);
+
+localStorage.setItem(
+"youthrise_last_answer",
+answer
+);
+
+}
+
 </script>
 
 </body>
