@@ -38,8 +38,8 @@
 <h2>🚀 Opportunities Hub</h2>
 
 <p>
-    Discover internships, learnerships, bursaries,
-    scholarships, graduate programmes and career pathways.
+    Discover careers, bursaries, scholarships,
+    learnerships and future opportunities.
 </p>
 ```
 
@@ -49,73 +49,18 @@
 
 ```
 <div class="card">
-    <h3>💻 Technology Careers</h3>
-    <p>
-        Software Development, Cybersecurity,
-        Networking and IT Support.
-    </p>
+    <h3>💻 Technology</h3>
+    <p>Software Development, Cybersecurity and IT careers.</p>
 </div>
 
 <div class="card">
-    <h3>🏥 Healthcare Careers</h3>
-    <p>
-        Medicine, Nursing, Pharmacy and
-        Allied Health Professions.
-    </p>
+    <h3>🏥 Healthcare</h3>
+    <p>Medicine, Nursing and Health Sciences.</p>
 </div>
 
 <div class="card">
-    <h3>⚙️ Engineering Careers</h3>
-    <p>
-        Civil, Electrical, Mechanical and
-        Industrial Engineering pathways.
-    </p>
-</div>
-
-<div class="card">
-    <h3>📈 Business Careers</h3>
-    <p>
-        Accounting, Finance, Marketing,
-        Management and Entrepreneurship.
-    </p>
-</div>
-```
-
-</section>
-
-<section class="cards">
-
-```
-<div class="card">
-    <h3>🎓 Bursaries</h3>
-    <p>
-        Funding opportunities for learners
-        and university students.
-    </p>
-</div>
-
-<div class="card">
-    <h3>📚 Scholarships</h3>
-    <p>
-        Academic, sporting and leadership
-        scholarship opportunities.
-    </p>
-</div>
-
-<div class="card">
-    <h3>🛠 Learnerships</h3>
-    <p>
-        Workplace training programmes that
-        help build practical skills.
-    </p>
-</div>
-
-<div class="card">
-    <h3>🎯 Graduate Programmes</h3>
-    <p>
-        Programmes designed to help graduates
-        start their careers.
-    </p>
+    <h3>⚙️ Engineering</h3>
+    <p>Civil, Electrical and Mechanical Engineering.</p>
 </div>
 ```
 
@@ -124,25 +69,25 @@
 <section class="about">
 
 ```
-<h2>💼 How to Improve Employability</h2>
+<h2>🔍 Opportunity Finder</h2>
 
-<p>
-    Build a strong CV, improve communication skills,
-    gain practical experience and continue learning.
-</p>
-```
+<p>Select your career interest below.</p>
 
-</section>
+<select id="careerInterest" style="padding:12px;border-radius:10px;width:250px;">
+    <option value="">Choose an Interest</option>
+    <option>Technology</option>
+    <option>Engineering</option>
+    <option>Business</option>
+    <option>Healthcare</option>
+    <option>Education</option>
+    <option>Agriculture</option>
+</select>
 
-<section class="about">
+<br><br>
 
-```
-<h2>🎤 Interview Tips</h2>
+<button onclick="saveInterest()">Save Interest</button>
 
-<p>
-    Research the organisation, prepare answers
-    to common questions and present yourself professionally.
-</p>
+<p id="interestMessage"></p>
 ```
 
 </section>
@@ -152,7 +97,7 @@
 ```
 <div class="stat">
     <h2>Careers</h2>
-    <p>Future Pathways</p>
+    <p>Explore Future Pathways</p>
 </div>
 
 <div class="stat">
@@ -185,6 +130,47 @@
 
 </footer>
 
-</body>
+<script>
 
+window.onload = function(){
+
+const savedInterest =
+localStorage.getItem("youthrise_interest");
+
+if(savedInterest){
+
+document.getElementById("interestMessage").innerHTML =
+"✅ Saved Interest: " + savedInterest;
+
+}
+
+}
+
+function saveInterest(){
+
+const interest =
+document.getElementById("careerInterest").value;
+
+if(interest === ""){
+
+document.getElementById("interestMessage").innerHTML =
+"❌ Please choose an interest.";
+
+return;
+
+}
+
+localStorage.setItem(
+"youthrise_interest",
+interest
+);
+
+document.getElementById("interestMessage").innerHTML =
+"✅ Interest saved: " + interest;
+
+}
+
+</script>
+
+</body>
 </html>
