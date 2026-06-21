@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exam Countdown - YouthRise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="hero">
+
+<h2>📅 Exam Countdown</h2>
+
+<p>Select your exam date.</p>
+
+<input type="date" id="examDate">
+
+<br><br>
+
+<button onclick="countdown()">Calculate</button>
+
+<h2 id="result"></h2>
+
+</section>
+
+<script>
+
+function countdown(){
+
+let exam =
+new Date(
+document.getElementById("examDate").value
+);
+
+let today =
+new Date();
+
+let difference =
+exam - today;
+
+let days =
+Math.ceil(
+difference /
+(1000*60*60*24)
+);
+
+document.getElementById("result").innerHTML =
+days + " days remaining";
+
+}
+
+</script>
+
+</body>
+</html>
