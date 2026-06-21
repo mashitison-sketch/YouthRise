@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marks Calculator - YouthRise</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="marks-calculator.html">Marks Calculator</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>🧮 Marks Calculator</h2>
+
+<p>
+Enter your marks below to calculate your average.
+</p>
+
+</section>
+
+<section class="about">
+
+<h2>Enter Your Marks</h2>
+
+<input type="number" id="mark1" placeholder="Subject 1 Mark">
+
+<br><br>
+
+<input type="number" id="mark2" placeholder="Subject 2 Mark">
+
+<br><br>
+
+<input type="number" id="mark3" placeholder="Subject 3 Mark">
+
+<br><br>
+
+<input type="number" id="mark4" placeholder="Subject 4 Mark">
+
+<br><br>
+
+<input type="number" id="mark5" placeholder="Subject 5 Mark">
+
+<br><br>
+
+<button onclick="calculateAverage()">Calculate Average</button>
+
+<br><br>
+
+<h3 id="result"></h3>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>5</h2>
+<p>Subjects</p>
+</div>
+
+<div class="stat">
+<h2>100%</h2>
+<p>Free Tool</p>
+</div>
+
+<div class="stat">
+<h2>Grade 6–12</h2>
+<p>Learner Support</p>
+</div>
+
+</section>
+
+<footer>
+
+<h3>YouthRise</h3>
+
+<p>One Platform. Endless Opportunities.</p>
+
+<p>
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms.html">Terms & Conditions</a>
+</p>
+
+<p>© 2026 YouthRise. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function calculateAverage(){
+
+let m1 = Number(document.getElementById("mark1").value) || 0;
+let m2 = Number(document.getElementById("mark2").value) || 0;
+let m3 = Number(document.getElementById("mark3").value) || 0;
+let m4 = Number(document.getElementById("mark4").value) || 0;
+let m5 = Number(document.getElementById("mark5").value) || 0;
+
+let average = (m1 + m2 + m3 + m4 + m5) / 5;
+
+document.getElementById("result").innerHTML =
+"📊 Your Average Mark: " + average.toFixed(1) + "%";
+
+localStorage.setItem(
+"youthrise_average",
+average.toFixed(1)
+);
+
+}
+
+window.onload = function(){
+
+const savedAverage =
+localStorage.getItem("youthrise_average");
+
+if(savedAverage){
+
+document.getElementById("result").innerHTML =
+"📊 Last Saved Average: " + savedAverage + "%";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
 
