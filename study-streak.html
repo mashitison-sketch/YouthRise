@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Streak - YouthRise</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
+</div>
+</header>
+
+<section class="hero">
+<h2>🏆 Study Streak Tracker</h2>
+<p>Track how many days you have studied.</p>
+
+<h1 id="streak">0 Days</h1>
+
+<button onclick="increaseStreak()">🔥 Studied Today</button> <button onclick="resetStreak()">🔄 Reset</button>
+
+</section>
+
+<script>
+
+let streak =
+localStorage.getItem("youthrise_streak") || 0;
+
+document.getElementById("streak").innerHTML =
+streak + " Days";
+
+function increaseStreak(){
+
+streak++;
+
+localStorage.setItem(
+"youthrise_streak",
+streak
+);
+
+document.getElementById("streak").innerHTML =
+streak + " Days";
+
+}
+
+function resetStreak(){
+
+streak = 0;
+
+localStorage.setItem(
+"youthrise_streak",
+0
+);
+
+document.getElementById("streak").innerHTML =
+"0 Days";
+
+}
+
+</script>
+
+</body>
+</html>
