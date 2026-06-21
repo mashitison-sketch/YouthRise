@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Planner - YouthRise</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="daily-planner.html">Daily Planner</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>📅 Daily Planner</h2>
+
+<p>Plan your day and stay productive.</p>
+
+</section>
+
+<section class="about">
+
+<h2>Today's Tasks</h2>
+
+<textarea id="plannerTasks" placeholder="Write your tasks here..."></textarea>
+
+<br><br>
+
+<button onclick="saveTasks()">💾 Save Tasks</button>
+
+<button onclick="clearTasks()">🗑️ Clear Tasks</button>
+
+<p id="plannerMessage"></p>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>Daily</h2>
+<p>Planning</p>
+</div>
+
+<div class="stat">
+<h2>Focus</h2>
+<p>Productivity</p>
+</div>
+
+<div class="stat">
+<h2>Success</h2>
+<p>Organisation</p>
+</div>
+
+</section>
+
+<footer>
+
+<h3>YouthRise</h3>
+
+<p>One Platform. Endless Opportunities.</p>
+
+<p>© 2026 YouthRise. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+const plannerBox =
+document.getElementById("plannerTasks");
+
+window.onload = function(){
+
+const savedTasks =
+localStorage.getItem("youthrise_tasks");
+
+if(savedTasks){
+plannerBox.value = savedTasks;
+}
+
+}
+
+function saveTasks(){
+
+localStorage.setItem(
+"youthrise_tasks",
+plannerBox.value
+);
+
+document.getElementById("plannerMessage").innerHTML =
+"✅ Tasks saved successfully!";
+
+}
+
+function clearTasks(){
+
+localStorage.removeItem("youthrise_tasks");
+
+plannerBox.value = "";
+
+document.getElementById("plannerMessage").innerHTML =
+"🗑️ Tasks cleared.";
+
+}
+
+</script>
+
+</body>
+</html>
