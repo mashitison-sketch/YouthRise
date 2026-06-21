@@ -3,14 +3,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Helper - YouthRise</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Helper - YouthRise</title>
 
-```
 <link rel="stylesheet" href="style.css">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-```
 
 </head>
 
@@ -18,213 +16,176 @@
 
 <header>
 
-```
 <div class="logo">
-    <div class="logo-box">YR</div>
-    <div class="logo-text">YouthRise</div>
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
 </div>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="school-helper.html">School Helper</a>
+<a href="index.html">Home</a>
+<a href="school-helper.html">School Helper</a>
 </nav>
-```
 
 </header>
 
 <section class="hero">
 
-```
 <h2>📚 School Helper</h2>
 
 <p>
-    Free learning support for Grade 6–12 learners.
-    Study smarter, revise effectively and prepare for exams.
+Free learning support for Grade 6–12 learners.
+Study smarter, revise effectively and prepare for exams.
 </p>
-```
 
 </section>
 
 <section class="about">
 
-```
-<h2>🎓 Grades Supported</h2>
+<h2>📖 Study Helper Tool</h2>
 
-<p>
-    YouthRise provides learning support for Grade 6, Grade 7,
-    Grade 8, Grade 9, Grade 10, Grade 11 and Grade 12 learners.
-</p>
-```
+<p>Select a subject and receive a study tip.</p>
 
-</section>
+<select id="subjectSelect" style="padding:12px;border-radius:10px;width:250px;">
+<option value="">Choose Subject</option>
+<option>Mathematics</option>
+<option>English</option>
+<option>Natural Sciences</option>
+<option>Physical Sciences</option>
+<option>Geography</option>
+<option>History</option>
+<option>Accounting</option>
+</select>
 
-<section class="cards">
+<br><br>
 
-```
-<div class="card">
-    <h3>📘 Mathematics</h3>
-    <p>Numbers, Algebra, Geometry, Trigonometry and Calculus.</p>
-</div>
+<button onclick="showTip()">Get Study Tip</button>
 
-<div class="card">
-    <h3>📖 English</h3>
-    <p>Language, Literature, Essays and Comprehension.</p>
-</div>
-
-<div class="card">
-    <h3>🧪 Natural Sciences</h3>
-    <p>Scientific investigations and science concepts.</p>
-</div>
-
-<div class="card">
-    <h3>⚛️ Physical Sciences</h3>
-    <p>Physics and Chemistry support.</p>
-</div>
-```
+<p id="studyTip"></p>
 
 </section>
 
 <section class="cards">
 
-```
 <div class="card">
-    <h3>🌱 Life Sciences</h3>
-    <p>Biology, ecosystems and living organisms.</p>
+<h3>📘 Mathematics</h3>
+<p>Numbers, Algebra, Geometry and Calculations.</p>
 </div>
 
 <div class="card">
-    <h3>🌍 Geography</h3>
-    <p>Maps, climate, resources and human geography.</p>
+<h3>📖 English</h3>
+<p>Language, Literature and Essay Writing.</p>
 </div>
 
 <div class="card">
-    <h3>🏛️ History</h3>
-    <p>Historical events, timelines and source analysis.</p>
+<h3>🧪 Sciences</h3>
+<p>Natural Sciences and Physical Sciences support.</p>
 </div>
-
-<div class="card">
-    <h3>📚 Social Sciences</h3>
-    <p>History and Geography foundations.</p>
-</div>
-```
-
-</section>
-
-<section class="cards">
-
-```
-<div class="card">
-    <h3>📊 Accounting</h3>
-    <p>Financial statements and accounting principles.</p>
-</div>
-
-<div class="card">
-    <h3>💼 Business Studies</h3>
-    <p>Management, entrepreneurship and marketing.</p>
-</div>
-
-<div class="card">
-    <h3>📈 Economics</h3>
-    <p>Markets, trade and economic systems.</p>
-</div>
-
-<div class="card">
-    <h3>🌐 EMS</h3>
-    <p>Economic and Management Sciences.</p>
-</div>
-```
-
-</section>
-
-<section class="cards">
-
-```
-<div class="card">
-    <h3>💻 CAT</h3>
-    <p>Computer Applications Technology.</p>
-</div>
-
-<div class="card">
-    <h3>🖥️ Information Technology</h3>
-    <p>Programming and computer systems.</p>
-</div>
-
-<div class="card">
-    <h3>⚡ EGD</h3>
-    <p>Engineering Graphics and Design.</p>
-</div>
-
-<div class="card">
-    <h3>❤️ Life Orientation</h3>
-    <p>Personal development and career guidance.</p>
-</div>
-```
-
-</section>
-
-<section class="about">
-
-```
-<h2>📄 Learning Resources</h2>
-
-<p>
-    Use School Helper together with Past Papers, AI Tutor,
-    revision notes and study plans to improve your results.
-</p>
-```
 
 </section>
 
 <section class="stats">
 
-```
 <div class="stat">
-    <h2>25+</h2>
-    <p>Subjects Supported</p>
+<h2>25+</h2>
+<p>Subjects Supported</p>
 </div>
 
 <div class="stat">
-    <h2>Grade 6–12</h2>
-    <p>Learner Support</p>
+<h2>Grade 6–12</h2>
+<p>Learner Support</p>
 </div>
 
 <div class="stat">
-    <h2>100%</h2>
-    <p>Free Resources</p>
+<h2>100%</h2>
+<p>Free Resources</p>
 </div>
-```
-
-</section>
-
-<section class="about">
-
-```
-<h2>🎯 Study Success Tips</h2>
-
-<p>
-    Create a study timetable, review notes regularly,
-    practise past questions and ask for help when needed.
-</p>
-```
 
 </section>
 
 <footer>
 
-```
 <h3>YouthRise</h3>
 
 <p>One Platform. Endless Opportunities.</p>
 
 <p>
-    <a href="privacy-policy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms & Conditions</a>
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms.html">Terms & Conditions</a>
 </p>
 
 <p>© 2026 YouthRise. All Rights Reserved.</p>
-```
 
 </footer>
+
+<script>
+
+function showTip(){
+
+let subject =
+document.getElementById("subjectSelect").value;
+
+let tip =
+"Please choose a subject.";
+
+if(subject === "Mathematics"){
+tip =
+"Practice calculations daily and complete past exam questions.";
+}
+
+else if(subject === "English"){
+tip =
+"Read regularly and improve your vocabulary every week.";
+}
+
+else if(subject === "Natural Sciences"){
+tip =
+"Focus on understanding concepts instead of memorising only.";
+}
+
+else if(subject === "Physical Sciences"){
+tip =
+"Practice formulas and understand how to apply them.";
+}
+
+else if(subject === "Geography"){
+tip =
+"Study maps regularly and learn key geographical terms.";
+}
+
+else if(subject === "History"){
+tip =
+"Create timelines to remember important events.";
+}
+
+else if(subject === "Accounting"){
+tip =
+"Practice financial statements and balancing accounts.";
+}
+
+document.getElementById("studyTip").innerHTML = tip;
+
+localStorage.setItem(
+"youthrise_subject",
+subject
+);
+
+}
+
+window.onload = function(){
+
+const savedSubject =
+localStorage.getItem("youthrise_subject");
+
+if(savedSubject){
+
+document.getElementById("subjectSelect").value =
+savedSubject;
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
