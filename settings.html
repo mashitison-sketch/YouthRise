@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings - YouthRise</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="settings.html">Settings</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>⚙️ Settings</h2>
+
+<p>
+Manage your YouthRise preferences and account settings.
+</p>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+
+<h3>👤 Profile Name</h3>
+
+<input
+type="text"
+id="userName"
+placeholder="Enter your name">
+
+<br><br>
+
+<button onclick="saveName()">
+Save Name
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>📢 Announcements</h3>
+
+<p>
+Choose whether to receive platform updates.
+</p>
+
+<label>
+<input type="checkbox" id="announcements">
+ Enable Announcements
+</label>
+
+<br><br>
+
+<button onclick="saveAnnouncements()">
+Save Preference
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>🗑️ Reset Data</h3>
+
+<p>
+Clear all locally saved YouthRise data.
+</p>
+
+<button onclick="resetData()">
+Reset Platform Data
+</button>
+
+</div>
+
+</section>
+
+<section class="about">
+
+<h2>💾 Settings Status</h2>
+
+<p id="statusMessage">
+No changes made yet.
+</p>
+
+</section>
+
+<footer>
+
+<h3>YouthRise</h3>
+
+<p>One Platform. Endless Opportunities.</p>
+
+<p>
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms.html">Terms & Conditions</a>
+</p>
+
+<p>© 2026 YouthRise. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+window.onload = function(){
+
+const savedName =
+localStorage.getItem("youthrise_name");
+
+if(savedName){
+document.getElementById("userName").value =
+savedName;
+}
+
+const announcements =
+localStorage.getItem("yr_announcements");
+
+if(announcements === "true"){
+document.getElementById("announcements").checked = true;
+}
+
+}
+
+function saveName(){
+
+localStorage.setItem(
+"youthrise_name",
+document.getElementById("userName").value
+);
+
+document.getElementById("statusMessage").innerHTML =
+"✅ Name updated successfully.";
+
+}
+
+function saveAnnouncements(){
+
+localStorage.setItem(
+"yr_announcements",
+document.getElementById("announcements").checked
+);
+
+document.getElementById("statusMessage").innerHTML =
+"✅ Announcement preference saved.";
+
+}
+
+function resetData(){
+
+if(confirm("Are you sure you want to clear all YouthRise data?")){
+
+localStorage.clear();
+
+document.getElementById("statusMessage").innerHTML =
+"🗑️ All saved data has been removed.";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
