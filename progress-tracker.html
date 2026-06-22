@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Progress Tracker - YouthRise</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="progress-tracker.html">Progress Tracker</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>📊 Progress Tracker</h2>
+
+<p>
+Track your academic progress and celebrate achievements.
+</p>
+
+</section>
+
+<section class="about">
+
+<h2>🎯 Completed Goals</h2>
+
+<h1 id="goalsCount">0</h1>
+
+<button onclick="addGoal()">✅ Goal Completed</button>
+
+</section>
+
+<section class="about">
+
+<h2>📚 Study Sessions</h2>
+
+<h1 id="studyCount">0</h1>
+
+<button onclick="addStudy()">📖 Study Session Completed</button>
+
+</section>
+
+<section class="about">
+
+<h2>🏆 Achievement Level</h2>
+
+<h1 id="level">Beginner</h1>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>🥉 Beginner</h3>
+<p>0 - 9 activities completed.</p>
+</div>
+
+<div class="card">
+<h3>🥈 Intermediate</h3>
+<p>10 - 24 activities completed.</p>
+</div>
+
+<div class="card">
+<h3>🥇 Advanced</h3>
+<p>25+ activities completed.</p>
+</div>
+
+</section>
+
+<footer>
+
+<h3>YouthRise</h3>
+
+<p>One Platform. Endless Opportunities.</p>
+
+<p>© 2026 YouthRise. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+let goals =
+parseInt(localStorage.getItem("yr_goals")) || 0;
+
+let study =
+parseInt(localStorage.getItem("yr_study")) || 0;
+
+document.getElementById("goalsCount").innerHTML = goals;
+document.getElementById("studyCount").innerHTML = study;
+
+updateLevel();
+
+function addGoal(){
+
+goals++;
+
+localStorage.setItem("yr_goals", goals);
+
+document.getElementById("goalsCount").innerHTML = goals;
+
+updateLevel();
+
+}
+
+function addStudy(){
+
+study++;
+
+localStorage.setItem("yr_study", study);
+
+document.getElementById("studyCount").innerHTML = study;
+
+updateLevel();
+
+}
+
+function updateLevel(){
+
+let total = goals + study;
+
+let level = "Beginner";
+
+if(total >= 10){
+level = "Intermediate";
+}
+
+if(total >= 25){
+level = "Advanced";
+}
+
+document.getElementById("level").innerHTML = level;
+
+}
+
+</script>
+
+</body>
+</html>
