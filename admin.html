@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouthRise Admin Panel</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise Admin</div>
+</div>
+
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="admin.html">Admin</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>🛠️ Admin Control Center</h2>
+
+<p>
+Manage YouthRise, monitor platform activity and track growth.
+</p>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>👤 Registered User</h3>
+<h2 id="adminUser">Unknown</h2>
+</div>
+
+<div class="card">
+<h3>🏆 Study Streak</h3>
+<h2 id="streakCount">0</h2>
+</div>
+
+<div class="card">
+<h3>🎯 Goals Completed</h3>
+<h2 id="goalCount">0</h2>
+</div>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>📚 Study Sessions</h3>
+<h2 id="studyCount">0</h2>
+</div>
+
+<div class="card">
+<h3>📝 Notes Status</h3>
+<h2 id="notesStatus">No Notes</h2>
+</div>
+
+<div class="card">
+<h3>🚀 Platform Status</h3>
+<h2>Online</h2>
+</div>
+
+</section>
+
+<section class="about">
+
+<h2>📢 Admin Announcement</h2>
+
+<textarea
+id="announcement"
+placeholder="Write an announcement..."></textarea>
+
+<br><br>
+
+<button onclick="saveAnnouncement()">
+Save Announcement
+</button>
+
+<p id="savedMessage"></p>
+
+</section>
+
+<footer>
+
+<h3>YouthRise</h3>
+
+<p>Admin Dashboard</p>
+
+<p>© 2026 YouthRise</p>
+
+</footer>
+
+<script>
+
+const user =
+localStorage.getItem("youthrise_name");
+
+if(user){
+document.getElementById("adminUser").innerHTML = user;
+}
+
+const streak =
+localStorage.getItem("youthrise_streak") || 0;
+
+document.getElementById("streakCount").innerHTML =
+streak;
+
+const goals =
+localStorage.getItem("yr_goals") || 0;
+
+document.getElementById("goalCount").innerHTML =
+goals;
+
+const study =
+localStorage.getItem("yr_study") || 0;
+
+document.getElementById("studyCount").innerHTML =
+study;
+
+const notes =
+localStorage.getItem("youthrise_notes");
+
+if(notes && notes.length > 0){
+
+document.getElementById("notesStatus").innerHTML =
+"Saved";
+
+}
+
+function saveAnnouncement(){
+
+localStorage.setItem(
+"yr_announcement",
+document.getElementById("announcement").value
+);
+
+document.getElementById("savedMessage").innerHTML =
+"✅ Announcement Saved";
+
+}
+
+</script>
+
+</body>
+</html>
