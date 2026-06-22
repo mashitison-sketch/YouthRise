@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search - YouthRise</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="search.html">Search</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>🔍 Search YouthRise</h2>
+
+<p>
+Quickly find tools, resources and opportunities.
+</p>
+
+<br>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search..."
+onkeyup="searchFeatures()">
+
+</section>
+
+<section class="cards" id="results">
+
+<div class="card feature">
+<h3>📚 School Helper</h3>
+<p>Learning support for Grade 6–12.</p>
+</div>
+
+<div class="card feature">
+<h3>🤖 AI Tutor</h3>
+<p>Study assistance and explanations.</p>
+</div>
+
+<div class="card feature">
+<h3>📄 Past Papers</h3>
+<p>Exam preparation resources.</p>
+</div>
+
+<div class="card feature">
+<h3>📝 Study Notes</h3>
+<p>Save personal notes.</p>
+</div>
+
+<div class="card feature">
+<h3>🎯 Goals Tracker</h3>
+<p>Track your goals.</p>
+</div>
+
+<div class="card feature">
+<h3>📅 Daily Planner</h3>
+<p>Organise your day.</p>
+</div>
+
+<div class="card feature">
+<h3>📊 Progress Tracker</h3>
+<p>Monitor achievements.</p>
+</div>
+
+<div class="card feature">
+<h3>⏱️ Study Timer</h3>
+<p>Focus on study sessions.</p>
+</div>
+
+<div class="card feature">
+<h3>🏆 Study Streak</h3>
+<p>Track consistency.</p>
+</div>
+
+<div class="card feature">
+<h3>📅 Exam Countdown</h3>
+<p>Count down to exams.</p>
+</div>
+
+<div class="card feature">
+<h3>📄 CV Builder</h3>
+<p>Create your CV.</p>
+</div>
+
+<div class="card feature">
+<h3>🧮 Marks Calculator</h3>
+<p>Calculate averages.</p>
+</div>
+
+<div class="card feature">
+<h3>💼 Opportunities</h3>
+<p>Jobs and internships.</p>
+</div>
+
+<div class="card feature">
+<h3>🎓 Bursary Finder</h3>
+<p>Find bursaries.</p>
+</div>
+
+<div class="card feature">
+<h3>🛠️ Admin Panel</h3>
+<p>Manage YouthRise.</p>
+</div>
+
+</section>
+
+<footer>
+
+<h3>YouthRise</h3>
+
+<p>One Platform. Endless Opportunities.</p>
+
+<p>© 2026 YouthRise. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function searchFeatures(){
+
+let input =
+document.getElementById("searchInput")
+.value
+.toLowerCase();
+
+let features =
+document.getElementsByClassName("feature");
+
+for(let i = 0; i < features.length; i++){
+
+let text =
+features[i].innerText.toLowerCase();
+
+if(text.includes(input)){
+
+features[i].style.display = "block";
+
+}else{
+
+features[i].style.display = "none";
+
+}
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
