@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bursary Finder - YouthRise</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="bursary-finder.html">Bursary Finder</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>🎓 Bursary Finder</h2>
+
+<p>
+Explore bursaries and funding opportunities to help support your education journey.
+</p>
+
+</section>
+
+<section class="about">
+
+<h2>🔍 Search Bursaries</h2>
+
+<input
+type="text"
+id="searchBox"
+placeholder="Search by field (Engineering, Medicine, IT...)"
+onkeyup="searchBursaries()">
+
+</section>
+
+<section class="cards" id="bursaryList">
+
+<div class="card bursary">
+<h3>⚙️ Engineering Bursary</h3>
+<p>Funding support for engineering students.</p>
+</div>
+
+<div class="card bursary">
+<h3>💻 Information Technology Bursary</h3>
+<p>Support for software development and IT studies.</p>
+</div>
+
+<div class="card bursary">
+<h3>🏥 Medical Bursary</h3>
+<p>Funding for healthcare and medical careers.</p>
+</div>
+
+<div class="card bursary">
+<h3>📊 Accounting Bursary</h3>
+<p>Financial support for accounting students.</p>
+</div>
+
+<div class="card bursary">
+<h3>📚 Education Bursary</h3>
+<p>Support for future teachers and educators.</p>
+</div>
+
+<div class="card bursary">
+<h3>⚖️ Law Bursary</h3>
+<p>Funding opportunities for law students.</p>
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>100+</h2>
+<p>Future Bursaries</p>
+</div>
+
+<div class="stat">
+<h2>Students</h2>
+<p>Funding Support</p>
+</div>
+
+<div class="stat">
+<h2>Success</h2>
+<p>Education Growth</p>
+</div>
+
+</section>
+
+<footer>
+
+<h3>YouthRise</h3>
+
+<p>One Platform. Endless Opportunities.</p>
+
+<p>
+<a href="privacy-policy.html">Privacy Policy</a> |
+<a href="terms.html">Terms & Conditions</a>
+</p>
+
+<p>© 2026 YouthRise. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function searchBursaries(){
+
+let input =
+document.getElementById("searchBox").value.toLowerCase();
+
+let bursaries =
+document.getElementsByClassName("bursary");
+
+for(let i = 0; i < bursaries.length; i++){
+
+let text =
+bursaries[i].innerText.toLowerCase();
+
+if(text.includes(input)){
+
+bursaries[i].style.display = "block";
+
+}else{
+
+bursaries[i].style.display = "none";
+
+}
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
