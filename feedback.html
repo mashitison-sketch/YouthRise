@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback - YouthRise</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
+</div>
+
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="feedback.html">Feedback</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>💬 Feedback & Suggestions</h2>
+
+<p>
+Help us improve YouthRise by sharing your ideas.
+</p>
+
+</section>
+
+<section class="about">
+
+<h2>Send Feedback</h2>
+
+<input
+type="text"
+id="feedbackName"
+placeholder="Your Name">
+
+<br><br>
+
+<textarea
+id="feedbackText"
+placeholder="Write your feedback here..."></textarea>
+
+<br><br>
+
+<button onclick="saveFeedback()">
+Submit Feedback
+</button>
+
+<p id="feedbackMessage"></p>
+
+</section>
+
+<footer>
+
+<h3>YouthRise</h3>
+
+<p>One Platform. Endless Opportunities.</p>
+
+<p>© 2026 YouthRise. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+function saveFeedback(){
+
+const feedback =
+document.getElementById("feedbackText").value;
+
+localStorage.setItem(
+"yr_feedback",
+feedback
+);
+
+document.getElementById("feedbackMessage").innerHTML =
+"✅ Feedback submitted successfully.";
+
+}
+
+</script>
+
+</body>
+</html>
