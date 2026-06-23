@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Announcements - YouthRise</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
+</div>
+
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="announcements.html">Announcements</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>📢 Announcements</h2>
+
+<p>Latest updates from YouthRise.</p>
+
+</section>
+
+<section class="about">
+
+<h2>Platform Update</h2>
+
+<p id="announcementText">
+No announcements available.
+</p>
+
+</section>
+
+<footer>
+
+<h3>YouthRise</h3>
+
+<p>One Platform. Endless Opportunities.</p>
+
+</footer>
+
+<script>
+
+const announcement =
+localStorage.getItem("yr_announcement");
+
+if(announcement){
+
+document.getElementById("announcementText").innerHTML =
+announcement;
+
+}
+
+</script>
+
+</body>
+</html>
