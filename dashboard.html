@@ -32,13 +32,13 @@
 
 <section class="hero">
 
-<h2>🚀 YouthRise Dashboard</h2>
+<h2>📊 YouthRise Dashboard</h2>
 
 <h3 id="welcomeUser"></h3>
 
 <p>
-Access all your learning tools, opportunities,
-career resources and platform features in one place.
+Welcome to your YouthRise dashboard.
+Access all your tools, resources and opportunities from one place.
 </p>
 
 <br>
@@ -48,9 +48,7 @@ career resources and platform features in one place.
 </section>
 
 <section class="about">
-
 <h2>📚 Learning Tools</h2>
-
 </section>
 
 <section class="cards">
@@ -78,9 +76,7 @@ career resources and platform features in one place.
 </section>
 
 <section class="about">
-
 <h2>🎯 Productivity Tools</h2>
-
 </section>
 
 <section class="cards">
@@ -123,9 +119,7 @@ career resources and platform features in one place.
 </section>
 
 <section class="about">
-
 <h2>💼 Career & Funding</h2>
-
 </section>
 
 <section class="cards">
@@ -153,9 +147,7 @@ career resources and platform features in one place.
 </section>
 
 <section class="about">
-
 <h2>⚙️ Platform</h2>
-
 </section>
 
 <section class="cards">
@@ -200,12 +192,15 @@ career resources and platform features in one place.
 <a href="launch.html"><button>Open</button></a>
 </div>
 
+<div class="card">
+<h3>🚀 Version History</h3>
+<a href="version.html"><button>Open</button></a>
+</div>
+
 </section>
 
 <section class="about">
-
 <h2>👑 Management</h2>
-
 </section>
 
 <section class="cards">
@@ -236,7 +231,7 @@ career resources and platform features in one place.
 
 <div class="stat">
 <h2>V1</h2>
-<p>YouthRise Platform</p>
+<p>YouthRise Release</p>
 </div>
 
 </section>
@@ -261,18 +256,13 @@ career resources and platform features in one place.
 const userName = localStorage.getItem("youthrise_name");
 
 if(userName){
-
 document.getElementById("welcomeUser").innerHTML =
 "Welcome back, " + userName + " 👋";
-
 }
 
 function logoutUser(){
-
 localStorage.removeItem("youthrise_logged_in");
-
 window.location.href = "login.html";
-
 }
 
 </script>
