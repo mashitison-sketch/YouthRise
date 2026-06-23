@@ -10,8 +10,8 @@
 
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.svg">
-
 <link rel="manifest" href="manifest.json">
+
 <meta name="theme-color" content="#0A2342">
 
 </head>
@@ -62,8 +62,8 @@ learn, grow and succeed.
 
 <p>
 YouthRise combines education, productivity,
-career development and opportunities into
-one powerful platform.
+career development, funding opportunities and
+personal growth tools into one platform.
 </p>
 
 </section>
@@ -72,17 +72,26 @@ one powerful platform.
 
 <div class="card">
 <h3>📚 Learn</h3>
-<p>School Helper, AI Tutor, Notes and Past Papers.</p>
+<p>
+School Helper, AI Tutor, Study Notes,
+Past Papers and Learning Resources.
+</p>
 </div>
 
 <div class="card">
 <h3>🎯 Grow</h3>
-<p>Goals, Planner, Progress Tracking and Study Tools.</p>
+<p>
+Track goals, study habits,
+progress and exam preparation.
+</p>
 </div>
 
 <div class="card">
 <h3>💼 Succeed</h3>
-<p>Bursaries, Funding, Opportunities and Careers.</p>
+<p>
+Explore bursaries, opportunities,
+careers and funding support.
+</p>
 </div>
 
 </section>
@@ -126,12 +135,12 @@ Marks Calculator • CV Builder • Bursary Finder
 
 <div class="card">
 <h3>🎓 Bursary Finder</h3>
-<p>Discover funding opportunities.</p>
+<p>Discover education funding opportunities.</p>
 </div>
 
 <div class="card">
 <h3>📄 CV Builder</h3>
-<p>Create a professional CV.</p>
+<p>Create a professional CV for applications.</p>
 </div>
 
 </section>
@@ -142,7 +151,7 @@ Marks Calculator • CV Builder • Bursary Finder
 
 <p>
 To empower young people through education,
-opportunities, personal development and career growth.
+opportunities, career development and personal growth.
 </p>
 
 </section>
@@ -152,14 +161,18 @@ opportunities, personal development and career growth.
 <h2>🚀 Start Your Journey Today</h2>
 
 <p>
-Join YouthRise and unlock learning,
-career development and opportunities.
+Join YouthRise and unlock tools designed to help
+you succeed in school, career and life.
 </p>
 
 <br>
 
 <a href="signup.html">
 <button>Create Account</button>
+</a>
+
+<a href="dashboard.html">
+<button>Go To Dashboard</button>
 </a>
 
 </section>
@@ -178,6 +191,13 @@ career development and opportunities.
 <p>© 2026 YouthRise. All Rights Reserved.</p>
 
 </footer>
+
+<script>
+if ("serviceWorker" in navigator) {
+navigator.serviceWorker.register("service-worker.js")
+.then(() => console.log("YouthRise Service Worker Registered"));
+}
+</script>
 
 </body>
 </html>
