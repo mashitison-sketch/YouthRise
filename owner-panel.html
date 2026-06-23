@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Owner Panel - YouthRise</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise Owner</div>
+</div>
+
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="admin.html">Admin</a>
+<a href="owner-panel.html">Owner Panel</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>👑 YouthRise Owner Panel</h2>
+
+<p>
+Private management dashboard for the YouthRise founder.
+</p>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>👤 Current User</h3>
+<h2 id="ownerName">Unknown</h2>
+</div>
+
+<div class="card">
+<h3>📢 Announcement</h3>
+<h2 id="announcementStatus">None</h2>
+</div>
+
+<div class="card">
+<h3>💬 Feedback</h3>
+<h2 id="feedbackStatus">None</h2>
+</div>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>🎯 Goals</h3>
+<h2 id="goalCount">0</h2>
+</div>
+
+<div class="card">
+<h3>📚 Study Sessions</h3>
+<h2 id="studyCount">0</h2>
+</div>
+
+<div class="card">
+<h3>🏆 Study Streak</h3>
+<h2 id="streakCount">0</h2>
+</div>
+
+</section>
+
+<section class="about">
+
+<h2>🚀 YouthRise Vision</h2>
+
+<p>
+Build a platform that helps learners succeed academically,
+discover opportunities and prepare for future careers.
+</p>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2>V1</h2>
+<p>Platform Version</p>
+</div>
+
+<div class="stat">
+<h2>Growing</h2>
+<p>Development Status</p>
+</div>
+
+<div class="stat">
+<h2>Future</h2>
+<p>Mobile App Ready</p>
+</div>
+
+</section>
+
+<footer>
+
+<h3>YouthRise</h3>
+
+<p>Owner Control Centre</p>
+
+<p>© 2026 YouthRise. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+const user =
+localStorage.getItem("youthrise_name");
+
+if(user){
+
+document.getElementById("ownerName").innerHTML =
+user;
+
+}
+
+const announcement =
+localStorage.getItem("yr_announcement");
+
+if(announcement){
+
+document.getElementById("announcementStatus").innerHTML =
+"Saved";
+
+}
+
+const feedback =
+localStorage.getItem("yr_feedback");
+
+if(feedback){
+
+document.getElementById("feedbackStatus").innerHTML =
+"Received";
+
+}
+
+document.getElementById("goalCount").innerHTML =
+localStorage.getItem("yr_goals") || 0;
+
+document.getElementById("studyCount").innerHTML =
+localStorage.getItem("yr_study") || 0;
+
+document.getElementById("streakCount").innerHTML =
+localStorage.getItem("youthrise_streak") || 0;
+
+</script>
+
+</body>
+</html>
