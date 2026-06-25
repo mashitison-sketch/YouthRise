@@ -37,6 +37,18 @@ Learnerships combine workplace experience with learning and training.
 
 </section>
 
+<section class="about">
+
+<h2>🔍 Search Learnerships</h2>
+
+<input
+type="text"
+id="searchBox"
+placeholder="Search learnerships..."
+style="width:90%;max-width:500px;padding:12px;border-radius:10px;border:none;font-size:16px;">
+
+</section>
+
 <section class="cards">
 
 <div class="card"><h3>Transnet Learnership</h3><p>Transport, logistics and engineering training.</p></div>
@@ -75,19 +87,9 @@ Learnerships combine workplace experience with learning and training.
 
 <div class="card"><h3>SAPS Learnership</h3><p>Public service and law enforcement pathways.</p></div>
 
-<div class="card"><h3>SETA Learnerships</h3><p>Industry-specific training programmes.</p></div>
-
-<div class="card"><h3>Department of Labour Learnerships</h3><p>Government-supported skills programmes.</p></div>
-
 <div class="card"><h3>Rand Water Learnership</h3><p>Water services and technical training.</p></div>
 
-<div class="card"><h3>City Power Learnership</h3><p>Electrical and utility sector training.</p></div>
-
 <div class="card"><h3>Anglo American Learnership</h3><p>Mining and engineering opportunities.</p></div>
-
-<div class="card"><h3>Harmony Gold Learnership</h3><p>Mining industry training programmes.</p></div>
-
-<div class="card"><h3>Sibanye-Stillwater Learnership</h3><p>Technical and mining skills development.</p></div>
 
 </section>
 
@@ -100,6 +102,29 @@ Learnerships combine workplace experience with learning and training.
 <p>© 2026 YouthRise</p>
 
 </footer>
+
+<script>
+
+const searchBox = document.getElementById("searchBox");
+
+searchBox.addEventListener("keyup", function(){
+
+const value = this.value.toLowerCase();
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+const text = card.innerText.toLowerCase();
+
+card.style.display =
+text.includes(value) ? "block" : "none";
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
