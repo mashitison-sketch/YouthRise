@@ -1,339 +1,75 @@
-<!DOCTYPE html>
-
+!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YouthRise Dashboard</title>
-
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.svg">
-
 </head>
-
 <body>
-
 <header>
-
-<div class="logo">
-<div class="logo-box">YR</div>
-<div class="logo-text">YouthRise</div>
-</div>
-
+<div class="logo"><div class="logo-box">YR</div><div class="logo-text">YouthRise</div></div>
 <nav>
 <a href="index.html">Home</a>
 <a href="dashboard.html">Dashboard</a>
 <a href="search.html">Search</a>
 <a href="settings.html">Settings</a>
 </nav>
-
 </header>
 
- <section class="hero">
-
+<section class="hero">
 <h2>🚀 YouthRise Dashboard</h2>
-
 <h3 id="welcomeUser"></h3>
-
 <p id="greeting"></p>
-
 <p id="todayDate"></p>
-
-<p>
-Everything you need to learn, grow and discover opportunities in one place.
-</p>
-
-<br>
-
-<a href="study-timer.html">
-<button>⏱️ Start Studying</button>
-</a>
-
-<a href="opportunities.html">
-<button>💼 Opportunities</button>
-</a>
-
+<p>Everything you need to learn, grow and discover opportunities in one place.</p>
+<a href="study-timer.html"><button>⏱️ Start Studying</button></a>
+<a href="opportunities.html"><button>💼 Opportunities</button></a>
 <button onclick="logoutUser()">🚪 Logout</button>
-
 </section>
 
-<section class="about">
-<h2>📚 Learning Tools</h2>
-</section>
-
+<section class="about"><h2>⚡ Quick Actions</h2></section>
 <section class="cards">
-
-<div class="card">
-<h3>📚 School Helper</h3>
-<a href="school-helper.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>🤖 AI Tutor</h3>
-<a href="ai-tutor.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>📄 Past Papers</h3>
-<a href="past-papers.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>📝 Study Notes</h3>
-<a href="notes.html"><button>Open</button></a>
-</div>
-
- </section>
- 
- <section class="about">
-<h2>🎯 Productivity Tools</h2>
+<div class="card"><h3>🤖 AI Tutor</h3><a href="ai-tutor.html"><button>Open</button></a></div>
+<div class="card"><h3>📚 School Helper</h3><a href="school-helper.html"><button>Open</button></a></div>
+<div class="card"><h3>📄 Past Papers</h3><a href="past-papers.html"><button>Open</button></a></div>
+<div class="card"><h3>📝 Study Notes</h3><a href="notes.html"><button>Open</button></a></div>
+<div class="card"><h3>🎓 Bursaries</h3><a href="bursaries.html"><button>Open</button></a></div>
+<div class="card"><h3>💼 Opportunities</h3><a href="opportunities.html"><button>Open</button></a></div>
 </section>
 
+<section class="about"><h2>📈 Today's Progress</h2></section>
 <section class="cards">
-
-<div class="card">
-<h3>🎯 Goals Tracker</h3>
-<a href="goals.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>📅 Daily Planner</h3>
-<a href="daily-planner.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>📊 Progress Tracker</h3>
-<a href="progress-tracker.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>⏱️ Study Timer</h3>
-<a href="study-timer.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>🏆 Study Streak</h3>
-<a href="study-streak.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>📅 Exam Countdown</h3>
-<a href="exam-countdown.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>🧮 Marks Calculator</h3>
-<a href="marks-calculator.html"><button>Open</button></a>
-</div>
-
-</section>
-
-<section class="about">
-<h2>💼 Career & Funding</h2>
-</section>
-
-<section class="cards">
-
-<div class="card">
-<h3>📄 CV Builder</h3>
-<a href="cv-builder.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>💼 Opportunities</h3>
-<a href="opportunities.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>💰 Funding</h3>
-<a href="funding.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>🎓 Bursary Finder</h3>
-<a href="bursary-finder.html"><button>Open</button></a>
-</div>
-
-</section>
-
-<section class="about">
-<h2>🌍 Opportunities Hub</h2>
-</section>
-
-<section class="cards">
-
-<div class="card">
-<h3>🎓 Bursaries</h3>
-<a href="bursaries.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>🛠️ Learnerships</h3>
-<a href="learnerships.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>🏢 Internships</h3>
-<a href="internships.html"><button>Open</button></a>
-</div>
-
-</section>
-
-  <section class="about">
-<h2>⚙️ Platform</h2>
-</section>
-
-<section class="cards">
-
-<div class="card">
-<h3>🔍 Search</h3>
-<a href="search.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>⚙️ Settings</h3>
-<a href="settings.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>📢 Announcements</h3>
-<a href="announcements.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>💬 Feedback</h3>
-<a href="feedback.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>❓ Help Centre</h3>
-<a href="help-centre.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>📩 Contact</h3>
-<a href="contact.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>👤 Profile</h3>
-<a href="profile.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>📱 App</h3>
-<a href="app.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>🚀 Launch Page</h3>
-<a href="launch.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>📈 Version History</h3>
-<a href="version.html"><button>Open</button></a>
-</div>
-
-</section>
-
-<section class="about">
-<h2>👑 Management</h2>
-</section>
-
-<section class="cards">
-
-<div class="card">
-<h3>🛠️ Admin Panel</h3>
-<a href="admin.html"><button>Open</button></a>
-</div>
-
-<div class="card">
-<h3>👑 Owner Panel</h3>
-<a href="owner-panel.html"><button>Open</button></a>
-</div>
-
+<div class="card"><h3>🔥 Study Streak</h3><p id="dashboardStreak">0 Days</p></div>
+<div class="card"><h3>🎯 Goals Completed</h3><p id="dashboardGoals">0</p></div>
+<div class="card"><h3>⏱️ Study Sessions</h3><p id="dashboardSessions">0</p></div>
 </section>
 
 <section class="stats">
-
-<div class="stat">
-<h2>30+</h2>
-<p>Platform Features</p>
-</div>
-
-<div class="stat">
-<h2>75+</h2>
-<p>Opportunities Listed</p>
-</div>
-
-<div class="stat">
-<h2>Grade 6–12</h2>
-<p>Learner Support</p>
-</div>
-
-<div class="stat">
-<h2>V1</h2>
-<p>YouthRise Release</p>
-</div>
-
+<div class="stat"><h2>30+</h2><p>Platform Features</p></div>
+<div class="stat"><h2>75+</h2><p>Opportunities</p></div>
+<div class="stat"><h2>V1</h2><p>YouthRise</p></div>
 </section>
 
 <footer>
-
 <h3>YouthRise</h3>
-
 <p>One Platform. Endless Opportunities.</p>
-
-<p>
-<a href="privacy-policy.html">Privacy Policy</a> |
-<a href="terms.html">Terms & Conditions</a>
-</p>
-
 <p>© 2026 YouthRise. All Rights Reserved.</p>
-
 </footer>
 
 <script>
-
-const userName = localStorage.getItem("youthrise_name");
-
-if(userName){
-document.getElementById("welcomeUser").innerHTML =
-"Welcome back, " + userName + " 👋";
-}
-
-const today = new Date();
-
-const hour = today.getHours();
-
-let greeting = "Good Evening";
-
-if(hour < 12){
-greeting = "Good Morning ☀️";
-}
-else if(hour < 18){
-greeting = "Good Afternoon 🌤️";
-}
-
-document.getElementById("greeting").innerHTML = greeting;
-
-document.getElementById("todayDate").innerHTML =
-today.toDateString();
-
-function logoutUser(){
-
-localStorage.removeItem("youthrise_logged_in");
-
-window.location.href = "login.html";
-
-}
-
+const userName=localStorage.getItem("youthrise_name");
+if(userName){document.getElementById("welcomeUser").innerHTML="Welcome back, "+userName+" 👋";}
+const t=new Date(),h=t.getHours();
+let g="Good Evening 🌙";
+if(h<12)g="Good Morning ☀️"; else if(h<18)g="Good Afternoon 🌤️";
+document.getElementById("greeting").textContent=g;
+document.getElementById("todayDate").textContent=t.toDateString();
+document.getElementById("dashboardStreak").textContent=(localStorage.getItem("studyStreak")||0)+" Days";
+document.getElementById("dashboardGoals").textContent=localStorage.getItem("goalsCompleted")||0;
+document.getElementById("dashboardSessions").textContent=localStorage.getItem("studySessions")||0;
+function logoutUser(){localStorage.removeItem("youthrise_logged_in");window.location.href="login.html";}
 </script>
-
 </body>
 </html>
-
-
-  
