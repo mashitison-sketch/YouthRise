@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Announcements - YouthRise</title>
+<title>YouthRise Announcements</title>
 
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="favicon.svg">
@@ -21,27 +21,48 @@
 </div>
 
 <nav>
+<a href="index.html">Home</a>
 <a href="dashboard.html">Dashboard</a>
-<a href="announcements.html">Announcements</a>
 </nav>
 
 </header>
 
 <section class="hero">
 
-<h2>📢 Announcements</h2>
+<h2>📢 YouthRise Announcements</h2>
 
-<p>Latest updates from YouthRise.</p>
+<p>
+Stay up to date with the latest platform news and important updates.
+</p>
 
 </section>
 
-<section class="about">
+<section class="cards">
 
-<h2>Platform Update</h2>
+<div class="card">
+<h3>🎉 YouthRise V1 Officially Launched</h3>
+<p>Welcome to YouthRise! Our platform is now live to help South African learners access education, opportunities and career resources.</p>
+</div>
 
-<p id="announcementText">
-No announcements available.
-</p>
+<div class="card">
+<h3>🎓 New Opportunities Added</h3>
+<p>New bursaries, learnerships and internships have been added. Visit the Opportunities Hub to explore them.</p>
+</div>
+
+<div class="card">
+<h3>🤖 AI Tutor Available</h3>
+<p>The AI Tutor is now available to help learners study, revise and prepare for exams.</p>
+</div>
+
+<div class="card">
+<h3>📚 Study Tools</h3>
+<p>Use the Study Timer, Goals Tracker, Progress Tracker and Study Streak to improve your learning routine.</p>
+</div>
+
+<div class="card">
+<h3>🚀 Coming Soon</h3>
+<p>More opportunities, notifications, platform improvements and the YouthRise mobile app are currently in development.</p>
+</div>
 
 </section>
 
@@ -51,21 +72,9 @@ No announcements available.
 
 <p>One Platform. Endless Opportunities.</p>
 
+<p>© 2026 YouthRise. All Rights Reserved.</p>
+
 </footer>
-
-<script>
-
-const announcement =
-localStorage.getItem("yr_announcement");
-
-if(announcement){
-
-document.getElementById("announcementText").innerHTML =
-announcement;
-
-}
-
-</script>
 
 </body>
 </html>
