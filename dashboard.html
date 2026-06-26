@@ -304,9 +304,30 @@ document.getElementById("welcomeUser").innerHTML =
 "Welcome back, " + userName + " 👋";
 }
 
+const today = new Date();
+
+const hour = today.getHours();
+
+let greeting = "Good Evening";
+
+if(hour < 12){
+greeting = "Good Morning ☀️";
+}
+else if(hour < 18){
+greeting = "Good Afternoon 🌤️";
+}
+
+document.getElementById("greeting").innerHTML = greeting;
+
+document.getElementById("todayDate").innerHTML =
+today.toDateString();
+
 function logoutUser(){
+
 localStorage.removeItem("youthrise_logged_in");
+
 window.location.href = "login.html";
+
 }
 
 </script>
