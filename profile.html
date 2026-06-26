@@ -4,33 +4,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profile - YouthRise</title>
+<title>YouthRise Profile</title>
+
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.svg">
 </head>
 
 <body>
+
+<header>
+
+<div class="logo">
+<div class="logo-box">YR</div>
+<div class="logo-text">YouthRise</div>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboard</a>
+</nav>
+
+</header>
 
 <section class="hero">
 
 <h2>👤 My Profile</h2>
 
-<h3 id="username"></h3>
+<h3 id="userName">Welcome!</h3>
 
-<p>Manage your YouthRise account.</p>
+<p>
+Manage your YouthRise account and track your learning journey.
+</p>
 
 </section>
 
+<section class="cards">
+
+<div class="card">
+<h3>📅 Member Since</h3>
+<p>2026</p>
+</div>
+
+<div class="card">
+<h3>🎯 Goals Completed</h3>
+<p id="goalsCompleted">0</p>
+</div>
+
+<div class="card">
+<h3>🔥 Study Streak</h3>
+<p id="studyStreak">0 Days</p>
+</div>
+
+<div class="card">
+<h3>⏱️ Study Sessions</h3>
+<p id="studySessions">0</p>
+</div>
+
+<div class="card">
+<h3>📚 Platform Status</h3>
+<p>Active Member</p>
+</div>
+
+<div class="card">
+<h3>🚀 YouthRise Version</h3>
+<p>V1 Launch</p>
+</div>
+
+</section>
+
+<footer>
+
+<h3>YouthRise</h3>
+
+<p>One Platform. Endless Opportunities.</p>
+
+<p>© 2026 YouthRise. All Rights Reserved.</p>
+
+</footer>
+
 <script>
 
-const user =
-localStorage.getItem("youthrise_name");
+const name = localStorage.getItem("youthrise_name");
 
-if(user){
-
-document.getElementById("username").innerHTML =
-user;
-
+if(name){
+document.getElementById("userName").innerHTML =
+"Welcome, " + name + " 👋";
 }
+
+const goals = localStorage.getItem("goalsCompleted") || "0";
+document.getElementById("goalsCompleted").innerHTML = goals;
+
+const streak = localStorage.getItem("studyStreak") || "0";
+document.getElementById("studyStreak").innerHTML = streak + " Days";
+
+const sessions = localStorage.getItem("studySessions") || "0";
+document.getElementById("studySessions").innerHTML = sessions;
 
 </script>
 
